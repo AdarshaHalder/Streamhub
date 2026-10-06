@@ -171,24 +171,24 @@ In the console output, the six known-defect scenarios show `✘` while counting 
 
 ## Claude Code reflection
 
-<!-- Written as a draft from the session log. Edit it into your own words before submitting. -->
+**How I used it.** I used Claude Code as a pair programmer for the whole project, not only to scaffold it. I started by asking it to read the assessment and propose a plan, and chose Section A so the UI tests would not depend on a third-party site. It then scaffolded the app, framework layout, page objects, step definitions and config, and we iterated on real test failures from there. Two habits paid off the most:
 
-**How it was used.** Claude Code was a pair programmer for the whole project. It read the assessment PDF, proposed the Section A plan, scaffolded the app, the framework layout, the page objects, the steps and the config, and then iterated on test failures. It probed JSONPlaceholder with `curl` *before* any assertions were written, which is how the real 500 and stack-trace defects were found instead of tests that assumed 4xx responses. It also wrote the SQL queries and verified them against the `sqlite3` CLI before turning them into tests.
+- **Look at the real system before writing assertions.** Before writing the API tests, I had it probe JSONPlaceholder with `curl`. That showed the API accepts everything with 201 but returns 500 with a stack trace for malformed JSON or bodies over 10 MB. The tests encode that observed behaviour, instead of assuming 4xx responses that never come. The SQL queries were also run against the `sqlite3` CLI first, and only then turned into tests with exact expected rows.
+- **Prove the tests can fail.** I had the app's EMI maths broken on purpose. 15 scenarios failed, and all passed again after the restore. That gave me confidence the assertions check real numbers rather than just "something rendered".
 
 **What worked well**
-- Exploring the real system first. Probing the API and running the SQL directly gave tests that encode *observed* behaviour plus documented expectations, instead of guesses.
-- The mutation check: deliberately breaking the app's EMI maths to prove the tests catch it (15 failures, then green again after the restore).
-- Unfamiliar APIs: playwright-bdd's special tags (`@fail`), Playwright's `ariaSnapshot`, `toHaveRole` and `toHaveAccessibleDescription`, and the Anthropic SDK's structured outputs were all checked against the installed package types before use.
+- It moved fast through unfamiliar territory: playwright-bdd (including the `@fail` tag for known defects), Playwright's `ariaSnapshot`, `toHaveRole` and `toHaveAccessibleDescription`, SQL window functions for the gaps-and-islands streak query, and the Anthropic SDK's structured outputs.
+- Checking APIs against the installed package types before using them avoided hallucinated method names.
 
 **Where it was wrong and had to be corrected**
-- `getByLabel('Loan type')` was ambiguous. It substring-matched the "Principal by **loan type**" chart, its SVG and its legend (strict-mode violation). It was replaced with `getByRole('combobox', { name: 'Loan type' })`.
-- The first version of `visibleLoanTypes()` was convoluted and read a column by hard-coded index. It was rewritten to find the column through its header text.
-- The healer's first validation pass approved `getByRole('spinbutton', { name: 'Home Loan Amount' })`, because the re-render gate switched tabs and then switched *back*. The gate now stays on a different tab, which forces the stable name `'Loan Amount'`.
-- The result-value fingerprint (role `definition` only) was too weak, because any `₹` figure passed. It now also checks the labelling `<dt>` term.
-- The heuristic healer missed the Calculate button: `<button type="submit">` was looked up as `button:submit` with no fallback to `button`, and "calculates" never matched "calculate". Both were fixed (lookup fallback, plus stemming).
-- `tsx` wraps named inner functions in a `__name()` helper that does not exist in the browser, so `locator.evaluate` crashed. The cleanup code was moved to the Node side.
-- The "broken" amount locator **passed**. Playwright fills range inputs, so the positional XPath quietly drove the slider. That turned out to be the most useful finding: self-healing has to detect *wrong* elements, not only missing ones.
+- **An ambiguous locator.** `getByLabel('Loan type')` also matched the "Principal by **loan type**" chart, its SVG and its legend (a strict-mode violation). It was replaced with `getByRole('combobox', { name: 'Loan type' })`.
+- **An over-complicated helper.** The first `visibleLoanTypes()` read a table column by hard-coded index. It was rewritten to find the column through its header text.
+- **A self-healing validation gate that was too lenient.** It approved `getByRole('spinbutton', { name: 'Home Loan Amount' })` because the re-render check switched tabs and then switched back. The gate now stays on another tab, which forces the stable name `'Loan Amount'`.
+- **A weak fingerprint.** Checking only the `definition` role let any `₹` figure pass as "the EMI". The fingerprint now also checks the labelling `<dt>` term.
+- **Two subtle bugs in the heuristic healer.** `<button type="submit">` was looked up as `button:submit` with no fallback to `button`, and "calculates" never matched "calculate". Both were fixed, with a lookup fallback and basic stemming.
+- **A tooling surprise.** `tsx` wraps named inner functions in a `__name()` helper that does not exist in the browser, so `locator.evaluate` crashed. The string cleanup was moved to the Node side.
+- **The most useful finding.** One "broken" locator **passed**. Playwright can fill range inputs, so the positional XPath quietly drove the slider instead of the text box. That changed the self-healing design: detection has to catch *wrong* elements, not only missing ones.
 
 **What did not work or was left out**
-- The AI path of the healer was implemented and type-checked, and it falls back cleanly without credentials. The committed report, however, comes from the offline heuristic run, because no API key was available in this environment.
-- Fixes are suggested, never auto-applied. That is deliberate (see the design doc), but it means there is no codemod yet.
+- The Claude-powered path of the healer is implemented and type-checked, and it falls back cleanly when there are no credentials. However, I did not have an API key in this environment, so the committed healing report comes from the offline heuristic run.
+- Fixes are suggested and never applied automatically. That is deliberate (see the design doc), but it means there is no codemod yet.
