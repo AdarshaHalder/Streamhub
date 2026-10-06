@@ -1,0 +1,8 @@
+node_modules/
+.features-gen/
+.env
+config/env/.env.*.local
+.DS_Store
+
+# Assessment brief (third-party copyright) — not redistributed
+Streamhub_QA_Automation_Assessment.pdf

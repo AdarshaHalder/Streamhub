@@ -1,0 +1,10 @@
+[
+  { "id": "LN-1001", "borrower": "Aarav Sharma", "type": "Home", "principal": 2500000, "annualRate": 8.5, "tenureYears": 20, "startMonth": "2024-04" },
+  { "id": "LN-1002", "borrower": "Diya Patel", "type": "Car", "principal": 800000, "annualRate": 9.25, "tenureYears": 5, "startMonth": "2025-01" },
+  { "id": "LN-1003", "borrower": "Kabir Singh", "type": "Personal", "principal": 300000, "annualRate": 13.5, "tenureYears": 3, "startMonth": "2025-06" },
+  { "id": "LN-1004", "borrower": "Meera Iyer", "type": "Home", "principal": 6000000, "annualRate": 7.9, "tenureYears": 25, "startMonth": "2023-09" },
+  { "id": "LN-1005", "borrower": "Rohan Gupta", "type": "Education", "principal": 1200000, "annualRate": 10.25, "tenureYears": 7, "startMonth": "2024-07" },
+  { "id": "LN-1006", "borrower": "Ananya Rao", "type": "Car", "principal": 1150000, "annualRate": 8.75, "tenureYears": 7, "startMonth": "2025-03" },
+  { "id": "LN-1007", "borrower": "Vihaan Mehta", "type": "Personal", "principal": 500000, "annualRate": 12, "tenureYears": 4, "startMonth": "2026-02" },
+  { "id": "LN-1008", "borrower": "Ishita Das", "type": "Home", "principal": 4200000, "annualRate": 8.1, "tenureYears": 15, "startMonth": "2025-11" }
+]

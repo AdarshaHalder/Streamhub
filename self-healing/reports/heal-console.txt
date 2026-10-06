@@ -1,0 +1,40 @@
+
+> streamhub-qa-automation@1.0.0 heal
+> tsx self-healing/heal.ts --no-ai
+
+
+▶ amountInput: WRONG_ELEMENT — expected role "spinbutton" named /Loan Amount/ but found <input type="range">
+  · AI disabled (--no-ai)
+  ✘ [heuristic] page.getByRole('spinbutton', { name: 'Home Loan Amount' })  (re-render: matched 0 after switching to the Car Loan tab)
+  ✔ [heuristic] page.getByRole('spinbutton', { name: 'Loan Amount' })
+  ✘ [heuristic] page.getByRole('spinbutton', { name: 'Loan Tenure' })  (semantic: expected role "spinbutton" named /Loan Amount/ but found <input type="number">)
+  ✘ [heuristic] page.getByRole('spinbutton', { name: 'Interest Rate' })  (semantic: expected role "spinbutton" named /Loan Amount/ but found <input type="number">)
+  ✘ [heuristic] page.getByRole('tablist', { name: 'Loan type' })  (semantic: expected role "spinbutton" named /Loan Amount/ but found <div role="tablist" aria-label="Loan type">)
+
+▶ rateInput: NOT_FOUND — "xpath=/html/body/div[1]/main/form/div[2]/input[1]" matched no elements
+  · AI disabled (--no-ai)
+  ✔ [heuristic] page.getByRole('spinbutton', { name: 'Interest Rate' })
+  ✘ [heuristic] page.getByRole('spinbutton', { name: 'Home Loan Amount' })  (semantic: expected role "spinbutton" named /Interest Rate/ but found <input type="number">)
+  ✘ [heuristic] page.getByRole('spinbutton', { name: 'Loan Amount' })  (semantic: expected role "spinbutton" named /Interest Rate/ but found <input type="number">)
+  ✘ [heuristic] page.getByRole('spinbutton', { name: 'Loan Tenure' })  (semantic: expected role "spinbutton" named /Interest Rate/ but found <input type="number">)
+
+▶ calculateButton: NOT_FOUND — "button.btn-calculate" matched no elements
+  · AI disabled (--no-ai)
+  ✘ [heuristic] page.getByRole('tab', { name: 'Home Loan' })  (semantic: expected role "button" named /^Calculate$/ but found <button role="tab">)
+  ✘ [heuristic] page.getByRole('tab', { name: 'Personal Loan' })  (semantic: expected role "button" named /^Calculate$/ but found <button role="tab">)
+  ✘ [heuristic] page.getByRole('tab', { name: 'Car Loan' })  (semantic: expected role "button" named /^Calculate$/ but found <button role="tab">)
+  ✔ [heuristic] page.getByRole('button', { name: 'Calculate' })
+
+▶ emiResult: NOT_FOUND — "#emi-result-value-3f9a" matched no elements
+  · AI disabled (--no-ai)
+  ✔ [heuristic] page.getByTestId('result-emi')
+  ✘ [heuristic] page.getByTestId('result-interest')  (semantic: expected the value labelled /^Monthly EMI$/ but found the one labelled "Total Interest Payable")
+  ✘ [heuristic] page.getByTestId('result-total')  (semantic: expected the value labelled /^Monthly EMI$/ but found the one labelled "Total Payment (Principal + Interest)")
+
+▶ totalInterestResult: NOT_FOUND — "section.results dl > div:nth-child(2) > span.value" matched no elements
+  · AI disabled (--no-ai)
+  ✔ [heuristic] page.getByTestId('result-interest')
+  ✘ [heuristic] page.getByTestId('result-total')  (semantic: expected the value labelled /^Total Interest Payable$/ but found the one labelled "Total Payment (Principal + Interest)")
+  ✘ [heuristic] page.getByTestId('result-emi')  (semantic: expected the value labelled /^Total Interest Payable$/ but found the one labelled "Monthly EMI")
+
+5/5 locators healthy or healed. Report: self-healing/reports/healing-report.md

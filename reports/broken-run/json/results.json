@@ -1,0 +1,603 @@
+{
+  "config": {
+    "argv": [
+      "/Users/adarshahalder/.nvm/versions/node/v20.20.0/bin/node",
+      "/Users/adarshahalder/projects/testt/node_modules/.bin/playwright",
+      "test",
+      "--project=self-healing"
+    ],
+    "configFile": "/Users/adarshahalder/projects/testt/playwright.config.ts",
+    "rootDir": "/Users/adarshahalder/projects/testt/.features-gen",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 5
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/adarshahalder/projects/testt/reports/broken-run/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "ui",
+        "name": "ui",
+        "testDir": "/Users/adarshahalder/projects/testt/.features-gen",
+        "testIgnore": [],
+        "testMatch": [
+          "/ui[\\\\/].*\\.spec\\.js$/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/adarshahalder/projects/testt/reports/broken-run/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "api",
+        "name": "api",
+        "testDir": "/Users/adarshahalder/projects/testt/.features-gen",
+        "testIgnore": [],
+        "testMatch": [
+          "/api[\\\\/].*\\.spec\\.js$/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/adarshahalder/projects/testt/reports/broken-run/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "sql",
+        "name": "sql",
+        "testDir": "/Users/adarshahalder/projects/testt/.features-gen",
+        "testIgnore": [],
+        "testMatch": [
+          "/sql[\\\\/].*\\.spec\\.js$/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/adarshahalder/projects/testt/reports/broken-run/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "self-healing",
+        "name": "self-healing",
+        "testDir": "/Users/adarshahalder/projects/testt/.features-gen",
+        "testIgnore": [],
+        "testMatch": [
+          "/self-healing[\\\\/].*\\.spec\\.js$/"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "reports/broken-run/playwright-html",
+          "open": "never"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "reports/broken-run/junit/results.xml"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/broken-run/json/results.json"
+        }
+      ],
+      [
+        "/Users/adarshahalder/projects/testt/node_modules/playwright-bdd/dist/reporter/cucumber/index.js",
+        {
+          "$type": "html",
+          "outputFile": "reports/broken-run/cucumber/report.html"
+        }
+      ],
+      [
+        "/Users/adarshahalder/projects/testt/node_modules/playwright-bdd/dist/reporter/cucumber/index.js",
+        {
+          "$type": "json",
+          "outputFile": "reports/broken-run/cucumber/report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 5,
+    "webServer": {
+      "command": "node app/server.js",
+      "url": "http://localhost:4173/health",
+      "env": {
+        "PORT": "4173"
+      },
+      "reuseExistingServer": true,
+      "timeout": 30000
+    }
+  },
+  "suites": [
+    {
+      "title": "self-healing/brittle-calculator.feature.spec.js",
+      "file": "self-healing/brittle-calculator.feature.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Legacy calculator flow (intentionally broken locators)",
+          "file": "self-healing/brittle-calculator.feature.spec.js",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Typing the loan amount (positional XPath silently drives the slider)",
+              "ok": true,
+              "tags": [
+                "broken",
+                "self-healing"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "self-healing",
+                  "projectName": "self-healing",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 301,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "When I type 2500000 into the legacy amount field",
+                          "duration": 24
+                        },
+                        {
+                          "title": "Then the legacy amount field should contain 2500000",
+                          "duration": 5
+                        }
+                      ],
+                      "startTime": "2026-10-06T07:18:58.392Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/adarshahalder/projects/testt/reports/broken-run/test-results/self-healing-brittle-calcu-2f6af-silently-drives-the-slider--self-healing/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "79b3d39eb4c8fe61987d-aae0e1d610684c4573a5",
+              "file": "self-healing/brittle-calculator.feature.spec.js",
+              "line": 10,
+              "column": 7
+            },
+            {
+              "title": "Typing the interest rate (absolute XPath)",
+              "ok": false,
+              "tags": [
+                "broken",
+                "self-healing"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "self-healing",
+                  "projectName": "self-healing",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 3307,
+                      "error": {
+                        "message": "TimeoutError: locator.fill: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=/html/body/div[1]/main/form/div[2]/input[1]')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.fill: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=/html/body/div[1]/main/form/div[2]/input[1]')\u001b[22m\n\n    at BrittleCalculatorPage.enterRate (/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts:110:26)\n    at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/self-healing/brittle.steps.ts:21:22)\n    at /Users/adarshahalder/projects/testt/.features-gen/self-healing/brittle-calculator.feature.spec.js:16:5",
+                        "location": {
+                          "file": "/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts",
+                          "column": 26,
+                          "line": 110
+                        },
+                        "snippet": "   at ../tests/pages/legacy/BrittleCalculatorPage.ts:110\n\n  108 |\n  109 |   async enterRate(rate: number): Promise<void> {\n> 110 |     await this.rateInput.fill(String(rate), QUICK);\n      |                          ^\n  111 |   }\n  112 |\n  113 |   async calculate(): Promise<void> {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts",
+                            "column": 26,
+                            "line": 110
+                          },
+                          "message": "TimeoutError: locator.fill: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=/html/body/div[1]/main/form/div[2]/input[1]')\u001b[22m\n\n\n   at ../tests/pages/legacy/BrittleCalculatorPage.ts:110\n\n  108 |\n  109 |   async enterRate(rate: number): Promise<void> {\n> 110 |     await this.rateInput.fill(String(rate), QUICK);\n      |                          ^\n  111 |   }\n  112 |\n  113 |   async calculate(): Promise<void> {\n    at BrittleCalculatorPage.enterRate (/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts:110:26)\n    at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/self-healing/brittle.steps.ts:21:22)\n    at /Users/adarshahalder/projects/testt/.features-gen/self-healing/brittle-calculator.feature.spec.js:16:5"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "When I type 10 into the legacy interest rate field",
+                          "duration": 3016,
+                          "error": {
+                            "message": "TimeoutError: locator.fill: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=/html/body/div[1]/main/form/div[2]/input[1]')\u001b[22m\n",
+                            "stack": "TimeoutError: locator.fill: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=/html/body/div[1]/main/form/div[2]/input[1]')\u001b[22m\n\n    at BrittleCalculatorPage.enterRate (/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts:110:26)\n    at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/self-healing/brittle.steps.ts:21:22)\n    at /Users/adarshahalder/projects/testt/.features-gen/self-healing/brittle-calculator.feature.spec.js:16:5",
+                            "location": {
+                              "file": "/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts",
+                              "column": 26,
+                              "line": 110
+                            },
+                            "snippet": "   at ../tests/pages/legacy/BrittleCalculatorPage.ts:110\n\n  108 |\n  109 |   async enterRate(rate: number): Promise<void> {\n> 110 |     await this.rateInput.fill(String(rate), QUICK);\n      |                          ^\n  111 |   }\n  112 |\n  113 |   async calculate(): Promise<void> {"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-10-06T07:18:58.387Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/adarshahalder/projects/testt/reports/broken-run/test-results/self-healing-brittle-calcu-783f1-terest-rate-absolute-XPath--self-healing/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/adarshahalder/projects/testt/reports/broken-run/test-results/self-healing-brittle-calcu-783f1-terest-rate-absolute-XPath--self-healing/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/adarshahalder/projects/testt/reports/broken-run/test-results/self-healing-brittle-calcu-783f1-terest-rate-absolute-XPath--self-healing/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts",
+                        "column": 26,
+                        "line": 110
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "79b3d39eb4c8fe61987d-865babbe5cc1c4cf66d8",
+              "file": "self-healing/brittle-calculator.feature.spec.js",
+              "line": 15,
+              "column": 7
+            },
+            {
+              "title": "Clicking Calculate (renamed CSS class)",
+              "ok": false,
+              "tags": [
+                "broken",
+                "self-healing"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "self-healing",
+                  "projectName": "self-healing",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 3302,
+                      "error": {
+                        "message": "TimeoutError: locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button.btn-calculate')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button.btn-calculate')\u001b[22m\n\n    at BrittleCalculatorPage.calculate (/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts:114:32)\n    at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/self-healing/brittle.steps.ts:25:22)\n    at /Users/adarshahalder/projects/testt/.features-gen/self-healing/brittle-calculator.feature.spec.js:20:5",
+                        "location": {
+                          "file": "/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts",
+                          "column": 32,
+                          "line": 114
+                        },
+                        "snippet": "   at ../tests/pages/legacy/BrittleCalculatorPage.ts:114\n\n  112 |\n  113 |   async calculate(): Promise<void> {\n> 114 |     await this.calculateButton.click(QUICK);\n      |                                ^\n  115 |   }\n  116 |\n  117 |   async emiText(): Promise<string> {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts",
+                            "column": 32,
+                            "line": 114
+                          },
+                          "message": "TimeoutError: locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button.btn-calculate')\u001b[22m\n\n\n   at ../tests/pages/legacy/BrittleCalculatorPage.ts:114\n\n  112 |\n  113 |   async calculate(): Promise<void> {\n> 114 |     await this.calculateButton.click(QUICK);\n      |                                ^\n  115 |   }\n  116 |\n  117 |   async emiText(): Promise<string> {\n    at BrittleCalculatorPage.calculate (/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts:114:32)\n    at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/self-healing/brittle.steps.ts:25:22)\n    at /Users/adarshahalder/projects/testt/.features-gen/self-healing/brittle-calculator.feature.spec.js:20:5"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "When I click the legacy Calculate button",
+                          "duration": 3012,
+                          "error": {
+                            "message": "TimeoutError: locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button.btn-calculate')\u001b[22m\n",
+                            "stack": "TimeoutError: locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button.btn-calculate')\u001b[22m\n\n    at BrittleCalculatorPage.calculate (/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts:114:32)\n    at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/self-healing/brittle.steps.ts:25:22)\n    at /Users/adarshahalder/projects/testt/.features-gen/self-healing/brittle-calculator.feature.spec.js:20:5",
+                            "location": {
+                              "file": "/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts",
+                              "column": 32,
+                              "line": 114
+                            },
+                            "snippet": "   at ../tests/pages/legacy/BrittleCalculatorPage.ts:114\n\n  112 |\n  113 |   async calculate(): Promise<void> {\n> 114 |     await this.calculateButton.click(QUICK);\n      |                                ^\n  115 |   }\n  116 |\n  117 |   async emiText(): Promise<string> {"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-10-06T07:18:58.387Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/adarshahalder/projects/testt/reports/broken-run/test-results/self-healing-brittle-calcu-af068-alculate-renamed-CSS-class--self-healing/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/adarshahalder/projects/testt/reports/broken-run/test-results/self-healing-brittle-calcu-af068-alculate-renamed-CSS-class--self-healing/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/adarshahalder/projects/testt/reports/broken-run/test-results/self-healing-brittle-calcu-af068-alculate-renamed-CSS-class--self-healing/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts",
+                        "column": 32,
+                        "line": 114
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "79b3d39eb4c8fe61987d-79668782625c0123082f",
+              "file": "self-healing/brittle-calculator.feature.spec.js",
+              "line": 19,
+              "column": 7
+            },
+            {
+              "title": "Reading the EMI result (stale generated id)",
+              "ok": false,
+              "tags": [
+                "broken",
+                "self-healing"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "self-healing",
+                  "projectName": "self-healing",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 3312,
+                      "error": {
+                        "message": "TimeoutError: locator.textContent: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#emi-result-value-3f9a')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.textContent: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#emi-result-value-3f9a')\u001b[22m\n\n    at BrittleCalculatorPage.emiText (/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts:118:34)\n    at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/self-healing/brittle.steps.ts:29:29)\n    at /Users/adarshahalder/projects/testt/.features-gen/self-healing/brittle-calculator.feature.spec.js:24:5",
+                        "location": {
+                          "file": "/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts",
+                          "column": 34,
+                          "line": 118
+                        },
+                        "snippet": "   at ../tests/pages/legacy/BrittleCalculatorPage.ts:118\n\n  116 |\n  117 |   async emiText(): Promise<string> {\n> 118 |     return (await this.emiResult.textContent(QUICK)) ?? '';\n      |                                  ^\n  119 |   }\n  120 |\n  121 |   async totalInterestText(): Promise<string> {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts",
+                            "column": 34,
+                            "line": 118
+                          },
+                          "message": "TimeoutError: locator.textContent: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#emi-result-value-3f9a')\u001b[22m\n\n\n   at ../tests/pages/legacy/BrittleCalculatorPage.ts:118\n\n  116 |\n  117 |   async emiText(): Promise<string> {\n> 118 |     return (await this.emiResult.textContent(QUICK)) ?? '';\n      |                                  ^\n  119 |   }\n  120 |\n  121 |   async totalInterestText(): Promise<string> {\n    at BrittleCalculatorPage.emiText (/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts:118:34)\n    at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/self-healing/brittle.steps.ts:29:29)\n    at /Users/adarshahalder/projects/testt/.features-gen/self-healing/brittle-calculator.feature.spec.js:24:5"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Then the legacy EMI result should show a rupee amount",
+                          "duration": 3011,
+                          "error": {
+                            "message": "TimeoutError: locator.textContent: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#emi-result-value-3f9a')\u001b[22m\n",
+                            "stack": "TimeoutError: locator.textContent: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#emi-result-value-3f9a')\u001b[22m\n\n    at BrittleCalculatorPage.emiText (/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts:118:34)\n    at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/self-healing/brittle.steps.ts:29:29)\n    at /Users/adarshahalder/projects/testt/.features-gen/self-healing/brittle-calculator.feature.spec.js:24:5",
+                            "location": {
+                              "file": "/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts",
+                              "column": 34,
+                              "line": 118
+                            },
+                            "snippet": "   at ../tests/pages/legacy/BrittleCalculatorPage.ts:118\n\n  116 |\n  117 |   async emiText(): Promise<string> {\n> 118 |     return (await this.emiResult.textContent(QUICK)) ?? '';\n      |                                  ^\n  119 |   }\n  120 |\n  121 |   async totalInterestText(): Promise<string> {"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-10-06T07:18:58.392Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/adarshahalder/projects/testt/reports/broken-run/test-results/self-healing-brittle-calcu-b9292--result-stale-generated-id--self-healing/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/adarshahalder/projects/testt/reports/broken-run/test-results/self-healing-brittle-calcu-b9292--result-stale-generated-id--self-healing/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/adarshahalder/projects/testt/reports/broken-run/test-results/self-healing-brittle-calcu-b9292--result-stale-generated-id--self-healing/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts",
+                        "column": 34,
+                        "line": 118
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "79b3d39eb4c8fe61987d-0bb249fb8a14012eee4f",
+              "file": "self-healing/brittle-calculator.feature.spec.js",
+              "line": 23,
+              "column": 7
+            },
+            {
+              "title": "Reading total interest (nth-child chain)",
+              "ok": false,
+              "tags": [
+                "broken",
+                "self-healing"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "self-healing",
+                  "projectName": "self-healing",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "failed",
+                      "duration": 3318,
+                      "error": {
+                        "message": "TimeoutError: locator.textContent: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('section.results dl > div:nth-child(2) > span.value')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.textContent: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('section.results dl > div:nth-child(2) > span.value')\u001b[22m\n\n    at BrittleCalculatorPage.totalInterestText (/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts:122:44)\n    at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/self-healing/brittle.steps.ts:33:29)\n    at /Users/adarshahalder/projects/testt/.features-gen/self-healing/brittle-calculator.feature.spec.js:28:5",
+                        "location": {
+                          "file": "/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts",
+                          "column": 44,
+                          "line": 122
+                        },
+                        "snippet": "   at ../tests/pages/legacy/BrittleCalculatorPage.ts:122\n\n  120 |\n  121 |   async totalInterestText(): Promise<string> {\n> 122 |     return (await this.totalInterestResult.textContent(QUICK)) ?? '';\n      |                                            ^\n  123 |   }\n  124 | }\n  125 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts",
+                            "column": 44,
+                            "line": 122
+                          },
+                          "message": "TimeoutError: locator.textContent: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('section.results dl > div:nth-child(2) > span.value')\u001b[22m\n\n\n   at ../tests/pages/legacy/BrittleCalculatorPage.ts:122\n\n  120 |\n  121 |   async totalInterestText(): Promise<string> {\n> 122 |     return (await this.totalInterestResult.textContent(QUICK)) ?? '';\n      |                                            ^\n  123 |   }\n  124 | }\n  125 |\n    at BrittleCalculatorPage.totalInterestText (/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts:122:44)\n    at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/self-healing/brittle.steps.ts:33:29)\n    at /Users/adarshahalder/projects/testt/.features-gen/self-healing/brittle-calculator.feature.spec.js:28:5"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Then the legacy total interest result should show a rupee amount",
+                          "duration": 3014,
+                          "error": {
+                            "message": "TimeoutError: locator.textContent: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('section.results dl > div:nth-child(2) > span.value')\u001b[22m\n",
+                            "stack": "TimeoutError: locator.textContent: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('section.results dl > div:nth-child(2) > span.value')\u001b[22m\n\n    at BrittleCalculatorPage.totalInterestText (/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts:122:44)\n    at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/self-healing/brittle.steps.ts:33:29)\n    at /Users/adarshahalder/projects/testt/.features-gen/self-healing/brittle-calculator.feature.spec.js:28:5",
+                            "location": {
+                              "file": "/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts",
+                              "column": 44,
+                              "line": 122
+                            },
+                            "snippet": "   at ../tests/pages/legacy/BrittleCalculatorPage.ts:122\n\n  120 |\n  121 |   async totalInterestText(): Promise<string> {\n> 122 |     return (await this.totalInterestResult.textContent(QUICK)) ?? '';\n      |                                            ^\n  123 |   }\n  124 | }\n  125 |"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-10-06T07:18:58.374Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/adarshahalder/projects/testt/reports/broken-run/test-results/self-healing-brittle-calcu-0757f-l-interest-nth-child-chain--self-healing/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/adarshahalder/projects/testt/reports/broken-run/test-results/self-healing-brittle-calcu-0757f-l-interest-nth-child-chain--self-healing/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/adarshahalder/projects/testt/reports/broken-run/test-results/self-healing-brittle-calcu-0757f-l-interest-nth-child-chain--self-healing/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts",
+                        "column": 44,
+                        "line": 122
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "79b3d39eb4c8fe61987d-42e81d37e30af5683f4b",
+              "file": "self-healing/brittle-calculator.feature.spec.js",
+              "line": 27,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-06T07:18:57.945Z",
+    "duration": 3958.847,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

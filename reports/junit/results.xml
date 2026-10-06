@@ -1,0 +1,286 @@
+<testsuites id="" name="" tests="49" failures="0" skipped="0" errors="0" time="15.456668">
+<testsuite name="ui/charts.feature.spec.js" timestamp="2026-10-06T07:18:36.240Z" hostname="ui" tests="4" failures="0" skipped="0" time="3.82" errors="0">
+<testcase name="EMI charts › Pie chart shows a non-zero principal / interest break-up — &lt;amount&gt; @ &lt;rate&gt;% for &lt;years&gt;y › Pie chart shows a non-zero principal / interest break-up — 25L @ 10% for 10y" classname="ui/charts.feature.spec.js" time="0.86">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-charts.feature-EMI-char-f4bb0-t-break-up-—-25L-10-for-10y-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI charts › Pie chart shows a non-zero principal / interest break-up — &lt;amount&gt; @ &lt;rate&gt;% for &lt;years&gt;y › Pie chart shows a non-zero principal / interest break-up — 50L @ 7.5% for 15y" classname="ui/charts.feature.spec.js" time="0.869">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-charts.feature-EMI-char-13289--break-up-—-50L-7-5-for-15y-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI charts › Bar chart follows the schedule start month and its tooltip shows correct values" classname="ui/charts.feature.spec.js" time="1.409">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-charts.feature-EMI-char-17cf5-ooltip-shows-correct-values-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI charts › Changing the start month changes the number of bars" classname="ui/charts.feature.spec.js" time="0.682">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-charts.feature-EMI-char-ce22a--changes-the-number-of-bars-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="ui/dashboard.feature.spec.js" timestamp="2026-10-06T07:18:36.240Z" hostname="ui" tests="6" failures="0" skipped="0" time="1.969" errors="0">
+<testcase name="Portfolio dashboard › Dashboard loads with summary cards, chart and loan table" classname="ui/dashboard.feature.spec.js" time="0.646">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-dashboard.feature-Portf-6998a--cards-chart-and-loan-table-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Portfolio dashboard › Filtering by loan type &quot;&lt;type&gt;&quot; recalculates the summary › Filtering by loan type &quot;Home&quot; recalculates the summary" classname="ui/dashboard.feature.spec.js" time="0.249">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-dashboard.feature-Portf-99ee2-me-recalculates-the-summary-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Portfolio dashboard › Filtering by loan type &quot;&lt;type&gt;&quot; recalculates the summary › Filtering by loan type &quot;Car&quot; recalculates the summary" classname="ui/dashboard.feature.spec.js" time="0.287">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-dashboard.feature-Portf-144ae-ar-recalculates-the-summary-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Portfolio dashboard › Filtering by loan type &quot;&lt;type&gt;&quot; recalculates the summary › Filtering by loan type &quot;Personal&quot; recalculates the summary" classname="ui/dashboard.feature.spec.js" time="0.268">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-dashboard.feature-Portf-48d20-al-recalculates-the-summary-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Portfolio dashboard › Filtering by loan type &quot;&lt;type&gt;&quot; recalculates the summary › Filtering by loan type &quot;Education&quot; recalculates the summary" classname="ui/dashboard.feature.spec.js" time="0.27">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-dashboard.feature-Portf-fc2df-on-recalculates-the-summary-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Portfolio dashboard › Navigating from the dashboard to the EMI calculator" classname="ui/dashboard.feature.spec.js" time="0.249">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-dashboard.feature-Portf-11330-board-to-the-EMI-calculator-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="ui/emi-calculator.feature.spec.js" timestamp="2026-10-06T07:18:36.240Z" hostname="ui" tests="14" failures="0" skipped="0" time="5.361" errors="0">
+<testcase name="EMI calculator › Calculated EMI matches an independently computed value — &lt;tab&gt; &lt;amount&gt; @ &lt;rate&gt;% for &lt;years&gt;y › Calculated EMI matches an independently computed value — Home Loan 25L @ 10% for 10y" classname="ui/emi-calculator.feature.spec.js" time="0.323">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-emi-calculator.feature--0d313--—-Home-Loan-25L-10-for-10y-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculator › Calculated EMI matches an independently computed value — &lt;tab&gt; &lt;amount&gt; @ &lt;rate&gt;% for &lt;years&gt;y › Calculated EMI matches an independently computed value — Home Loan 50L @ 7.5% for 15y" classname="ui/emi-calculator.feature.spec.js" time="0.346">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-emi-calculator.feature--eff64-—-Home-Loan-50L-7-5-for-15y-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculator › Calculated EMI matches an independently computed value — &lt;tab&gt; &lt;amount&gt; @ &lt;rate&gt;% for &lt;years&gt;y › Calculated EMI matches an independently computed value — Personal Loan 10L @ 12% for 5y" classname="ui/emi-calculator.feature.spec.js" time="0.344">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-emi-calculator.feature--9b6be-Personal-Loan-10L-12-for-5y-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculator › Calculated EMI matches an independently computed value — &lt;tab&gt; &lt;amount&gt; @ &lt;rate&gt;% for &lt;years&gt;y › Calculated EMI matches an independently computed value — Car Loan 8L @ 9.25% for 7y" classname="ui/emi-calculator.feature.spec.js" time="0.34">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-emi-calculator.feature--5ea53-e-—-Car-Loan-8L-9-25-for-7y-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculator › Calculated EMI matches an independently computed value — &lt;tab&gt; &lt;amount&gt; @ &lt;rate&gt;% for &lt;years&gt;y › Calculated EMI matches an independently computed value — Home Loan 2Cr @ 5% for 30y" classname="ui/emi-calculator.feature.spec.js" time="0.349">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-emi-calculator.feature--0c8b7-e-—-Home-Loan-2Cr-5-for-30y-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculator › Calculated EMI matches an independently computed value — &lt;tab&gt; &lt;amount&gt; @ &lt;rate&gt;% for &lt;years&gt;y › Calculated EMI matches an independently computed value — Personal Loan 10K @ 30% for 1y" classname="ui/emi-calculator.feature.spec.js" time="0.327">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-emi-calculator.feature--26ca2-Personal-Loan-10K-30-for-1y-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculator › Values set by dragging the sliders produce the correct EMI" classname="ui/emi-calculator.feature.spec.js" time="0.755">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-emi-calculator.feature--eddce-ers-produce-the-correct-EMI-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculator › Out-of-range input is rejected with an accessible error — &lt;field&gt; = &quot;&lt;value&gt;&quot; › Out-of-range input is rejected with an accessible error — amount = &quot;0&quot;" classname="ui/emi-calculator.feature.spec.js" time="0.372">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-emi-calculator.feature--0cbd3-ccessible-error-—-amount-0--ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculator › Out-of-range input is rejected with an accessible error — &lt;field&gt; = &quot;&lt;value&gt;&quot; › Out-of-range input is rejected with an accessible error — amount = &quot;30000000&quot;" classname="ui/emi-calculator.feature.spec.js" time="0.379">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-emi-calculator.feature--cadc6-le-error-—-amount-30000000--ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculator › Out-of-range input is rejected with an accessible error — &lt;field&gt; = &quot;&lt;value&gt;&quot; › Out-of-range input is rejected with an accessible error — amount = &quot;&quot;" classname="ui/emi-calculator.feature.spec.js" time="0.399">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-emi-calculator.feature--5c0eb--accessible-error-—-amount--ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculator › Out-of-range input is rejected with an accessible error — &lt;field&gt; = &quot;&lt;value&gt;&quot; › Out-of-range input is rejected with an accessible error — rate = &quot;35&quot;" classname="ui/emi-calculator.feature.spec.js" time="0.377">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-emi-calculator.feature--afc7c-accessible-error-—-rate-35--ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculator › Out-of-range input is rejected with an accessible error — &lt;field&gt; = &quot;&lt;value&gt;&quot; › Out-of-range input is rejected with an accessible error — rate = &quot;-1&quot;" classname="ui/emi-calculator.feature.spec.js" time="0.359">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-emi-calculator.feature--c8d54-accessible-error-—-rate--1--ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculator › Out-of-range input is rejected with an accessible error — &lt;field&gt; = &quot;&lt;value&gt;&quot; › Out-of-range input is rejected with an accessible error — tenure = &quot;0&quot;" classname="ui/emi-calculator.feature.spec.js" time="0.377">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-emi-calculator.feature--ad359-ccessible-error-—-tenure-0--ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculator › Out-of-range input is rejected with an accessible error — &lt;field&gt; = &quot;&lt;value&gt;&quot; › Out-of-range input is rejected with an accessible error — tenure = &quot;2.5&quot;" classname="ui/emi-calculator.feature.spec.js" time="0.314">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/ui-emi-calculator.feature--2ab6b-essible-error-—-tenure-2-5--ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="api/posts-boundary.feature.spec.js" timestamp="2026-10-06T07:18:36.240Z" hostname="api" tests="23" failures="0" skipped="0" time="42.114" errors="0">
+<testcase name="JSONPlaceholder — boundary and invalid data on POST /posts › Excessively long titles › A &lt;length&gt;-character title is handled without a server error › A 255-character title is handled without a server error" classname="api/posts-boundary.feature.spec.js" time="0.69">
+</testcase>
+<testcase name="JSONPlaceholder — boundary and invalid data on POST /posts › Excessively long titles › A &lt;length&gt;-character title is handled without a server error › A 256-character title is handled without a server error" classname="api/posts-boundary.feature.spec.js" time="0.609">
+</testcase>
+<testcase name="JSONPlaceholder — boundary and invalid data on POST /posts › Excessively long titles › A &lt;length&gt;-character title is handled without a server error › A 10000-character title is handled without a server error" classname="api/posts-boundary.feature.spec.js" time="1.203">
+</testcase>
+<testcase name="JSONPlaceholder — boundary and invalid data on POST /posts › Excessively long titles › A &lt;length&gt;-character title is handled without a server error › A 1000000-character title is handled without a server error" classname="api/posts-boundary.feature.spec.js" time="3.595">
+</testcase>
+<testcase name="JSONPlaceholder — boundary and invalid data on POST /posts › Excessively long titles › A payload above the server&apos;s body limit is rejected with 413, not 500" classname="api/posts-boundary.feature.spec.js" time="11.869">
+<properties>
+<property name="slow" value="">
+</property>
+<property name="fail" value="">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/api-posts-boundary.feature-9eaf3-s-rejected-with-413-not-500-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="JSONPlaceholder — boundary and invalid data on POST /posts › Unsupported special characters › Title with &lt;category&gt; is stored without server error or corruption › Title with HTML and script injection is stored without server error or corruption" classname="api/posts-boundary.feature.spec.js" time="1.271">
+</testcase>
+<testcase name="JSONPlaceholder — boundary and invalid data on POST /posts › Unsupported special characters › Title with &lt;category&gt; is stored without server error or corruption › Title with SQL injection is stored without server error or corruption" classname="api/posts-boundary.feature.spec.js" time="1.125">
+</testcase>
+<testcase name="JSONPlaceholder — boundary and invalid data on POST /posts › Unsupported special characters › Title with &lt;category&gt; is stored without server error or corruption › Title with emoji and astral unicode is stored without server error or corruption" classname="api/posts-boundary.feature.spec.js" time="1.584">
+</testcase>
+<testcase name="JSONPlaceholder — boundary and invalid data on POST /posts › Unsupported special characters › Title with &lt;category&gt; is stored without server error or corruption › Title with RTL override and zero-width is stored without server error or corruption" classname="api/posts-boundary.feature.spec.js" time="1.03">
+</testcase>
+<testcase name="JSONPlaceholder — boundary and invalid data on POST /posts › Unsupported special characters › Title with &lt;category&gt; is stored without server error or corruption › Title with control characters is stored without server error or corruption" classname="api/posts-boundary.feature.spec.js" time="1.031">
+</testcase>
+<testcase name="JSONPlaceholder — boundary and invalid data on POST /posts › Unsupported special characters › Title with &lt;category&gt; is stored without server error or corruption › Title with JSON metacharacters is stored without server error or corruption" classname="api/posts-boundary.feature.spec.js" time="1.307">
+</testcase>
+<testcase name="JSONPlaceholder — boundary and invalid data on POST /posts › Unsupported special characters › Title with &lt;category&gt; is stored without server error or corruption › Title with mixed scripts is stored without server error or corruption" classname="api/posts-boundary.feature.spec.js" time="1.04">
+</testcase>
+<testcase name="JSONPlaceholder — boundary and invalid data on POST /posts › Missing or invalid required fields › Post with &lt;problem&gt; does not cause a server error › Post with no userId does not cause a server error" classname="api/posts-boundary.feature.spec.js" time="1.067">
+</testcase>
+<testcase name="JSONPlaceholder — boundary and invalid data on POST /posts › Missing or invalid required fields › Post with &lt;problem&gt; does not cause a server error › Post with no title does not cause a server error" classname="api/posts-boundary.feature.spec.js" time="1.325">
+</testcase>
+<testcase name="JSONPlaceholder — boundary and invalid data on POST /posts › Missing or invalid required fields › Post with &lt;problem&gt; does not cause a server error › Post with an empty body does not cause a server error" classname="api/posts-boundary.feature.spec.js" time="1.472">
+</testcase>
+<testcase name="JSONPlaceholder — boundary and invalid data on POST /posts › Missing or invalid required fields › Post with &lt;problem&gt; does not cause a server error › Post with a string userId does not cause a server error" classname="api/posts-boundary.feature.spec.js" time="1.781">
+</testcase>
+<testcase name="JSONPlaceholder — boundary and invalid data on POST /posts › Missing or invalid required fields › Post with &lt;problem&gt; does not cause a server error › Post with a negative userId does not cause a server error" classname="api/posts-boundary.feature.spec.js" time="1.439">
+</testcase>
+<testcase name="JSONPlaceholder — boundary and invalid data on POST /posts › Missing or invalid required fields › Post with &lt;problem&gt; does not cause a server error › Post with a null title does not cause a server error" classname="api/posts-boundary.feature.spec.js" time="1.792">
+</testcase>
+<testcase name="JSONPlaceholder — boundary and invalid data on POST /posts › Missing or invalid required fields › Post with &lt;problem&gt; is rejected with 400 Bad Request › Post with no userId is rejected with 400 Bad Request" classname="api/posts-boundary.feature.spec.js" time="1.722">
+<properties>
+<property name="fail" value="">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/api-posts-boundary.feature-24ab1-jected-with-400-Bad-Request-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="JSONPlaceholder — boundary and invalid data on POST /posts › Missing or invalid required fields › Post with &lt;problem&gt; is rejected with 400 Bad Request › Post with an empty body is rejected with 400 Bad Request" classname="api/posts-boundary.feature.spec.js" time="1.65">
+<properties>
+<property name="fail" value="">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/api-posts-boundary.feature-a837e-jected-with-400-Bad-Request-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="JSONPlaceholder — boundary and invalid data on POST /posts › Missing or invalid required fields › Post with &lt;problem&gt; is rejected with 400 Bad Request › Post with a string userId is rejected with 400 Bad Request" classname="api/posts-boundary.feature.spec.js" time="1.405">
+<properties>
+<property name="fail" value="">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/api-posts-boundary.feature-bdc5d-jected-with-400-Bad-Request-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="JSONPlaceholder — boundary and invalid data on POST /posts › Malformed requests › Malformed JSON is rejected with 400, not a server error" classname="api/posts-boundary.feature.spec.js" time="1.098">
+<properties>
+<property name="fail" value="">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/api-posts-boundary.feature-fde59-with-400-not-a-server-error-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="JSONPlaceholder — boundary and invalid data on POST /posts › Malformed requests › Error responses do not leak server internals" classname="api/posts-boundary.feature.spec.js" time="1.009">
+<properties>
+<property name="fail" value="">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/api-posts-boundary.feature-2b140-o-not-leak-server-internals-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="sql/sql-scenarios.feature.spec.js" timestamp="2026-10-06T07:18:36.240Z" hostname="sql" tests="2" failures="0" skipped="0" time="0.359" errors="0">
+<testcase name="SQL scenarios › Round-trip transfers — B returns a similar amount (±10%) to A within 24 hours" classname="sql/sql-scenarios.feature.spec.js" time="0.181">
+</testcase>
+<testcase name="SQL scenarios › IPL 2024 — players with 30+ runs in at least 3 consecutive matches" classname="sql/sql-scenarios.feature.spec.js" time="0.178">
+</testcase>
+</testsuite>
+</testsuites>

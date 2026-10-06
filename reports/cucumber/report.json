@@ -1,0 +1,3970 @@
+[
+  {
+    "description": "  As a loan officer\n  I want a summary of the loan portfolio\n  So that I can see exposure and expected collections at a glance",
+    "elements": [
+      {
+        "description": "",
+        "id": "portfolio-dashboard;dashboard-loads-with-summary-cards,-chart-and-loan-table",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Dashboard loads with summary cards, chart and loan table",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open the portfolio dashboard",
+            "result": {
+              "status": "passed",
+              "duration": 122000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the portfolio dashboard should be displayed",
+            "result": {
+              "status": "passed",
+              "duration": 35000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the \"Dashboard\" navigation link should be active",
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "the summary cards should match my own calculation for \"All\" loans",
+            "result": {
+              "status": "passed",
+              "duration": 20000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "the loans table should list every loan in the portfolio",
+            "result": {
+              "status": "passed",
+              "duration": 39000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "the principal-by-type pie chart should render non-zero slices that match the portfolio",
+            "result": {
+              "status": "passed",
+              "duration": 89000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 84000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@dashboard",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 10
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "portfolio-dashboard;filtering-by-loan-type-\"home\"-recalculates-the-summary",
+        "keyword": "Scenario Outline",
+        "line": 26,
+        "name": "Filtering by loan type \"Home\" recalculates the summary",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open the portfolio dashboard",
+            "result": {
+              "status": "passed",
+              "duration": 33000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I filter the dashboard by loan type \"Home\"",
+            "result": {
+              "status": "passed",
+              "duration": 28000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "only \"Home\" loans should be listed",
+            "result": {
+              "status": "passed",
+              "duration": 45000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "the summary cards should match my own calculation for \"Home\" loans",
+            "result": {
+              "status": "passed",
+              "duration": 22000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "the principal-by-type pie chart should render non-zero slices that match the portfolio",
+            "result": {
+              "status": "passed",
+              "duration": 35000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 32000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@dashboard",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "portfolio-dashboard;filtering-by-loan-type-\"car\"-recalculates-the-summary",
+        "keyword": "Scenario Outline",
+        "line": 27,
+        "name": "Filtering by loan type \"Car\" recalculates the summary",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open the portfolio dashboard",
+            "result": {
+              "status": "passed",
+              "duration": 33000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I filter the dashboard by loan type \"Car\"",
+            "result": {
+              "status": "passed",
+              "duration": 23000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "only \"Car\" loans should be listed",
+            "result": {
+              "status": "passed",
+              "duration": 52000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "the summary cards should match my own calculation for \"Car\" loans",
+            "result": {
+              "status": "passed",
+              "duration": 20000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "the principal-by-type pie chart should render non-zero slices that match the portfolio",
+            "result": {
+              "status": "passed",
+              "duration": 55000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 39000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@dashboard",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "portfolio-dashboard;filtering-by-loan-type-\"personal\"-recalculates-the-summary",
+        "keyword": "Scenario Outline",
+        "line": 28,
+        "name": "Filtering by loan type \"Personal\" recalculates the summary",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open the portfolio dashboard",
+            "result": {
+              "status": "passed",
+              "duration": 38000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I filter the dashboard by loan type \"Personal\"",
+            "result": {
+              "status": "passed",
+              "duration": 25000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "only \"Personal\" loans should be listed",
+            "result": {
+              "status": "passed",
+              "duration": 51000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "the summary cards should match my own calculation for \"Personal\" loans",
+            "result": {
+              "status": "passed",
+              "duration": 21000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "the principal-by-type pie chart should render non-zero slices that match the portfolio",
+            "result": {
+              "status": "passed",
+              "duration": 46000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@dashboard",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "portfolio-dashboard;filtering-by-loan-type-\"education\"-recalculates-the-summary",
+        "keyword": "Scenario Outline",
+        "line": 29,
+        "name": "Filtering by loan type \"Education\" recalculates the summary",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open the portfolio dashboard",
+            "result": {
+              "status": "passed",
+              "duration": 39000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I filter the dashboard by loan type \"Education\"",
+            "result": {
+              "status": "passed",
+              "duration": 23000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "only \"Education\" loans should be listed",
+            "result": {
+              "status": "passed",
+              "duration": 47000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "the summary cards should match my own calculation for \"Education\" loans",
+            "result": {
+              "status": "passed",
+              "duration": 19000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "the principal-by-type pie chart should render non-zero slices that match the portfolio",
+            "result": {
+              "status": "passed",
+              "duration": 54000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 26000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@dashboard",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "portfolio-dashboard;navigating-from-the-dashboard-to-the-emi-calculator",
+        "keyword": "Scenario",
+        "line": 31,
+        "name": "Navigating from the dashboard to the EMI calculator",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open the portfolio dashboard",
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "I navigate to \"EMI Calculator\" from the main menu",
+            "result": {
+              "status": "passed",
+              "duration": 78000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "the EMI calculator should be displayed",
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "the \"EMI Calculator\" navigation link should be active",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 38000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@dashboard",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "ui-›-portfolio-dashboard",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Portfolio dashboard",
+    "tags": [
+      {
+        "name": "@ui",
+        "line": 1
+      },
+      {
+        "name": "@dashboard",
+        "line": 1
+      }
+    ],
+    "uri": "tests/features/ui/dashboard.feature"
+  },
+  {
+    "description": "  The calculator visualises the loan as a principal/interest pie chart and a\n  yearly stacked bar chart; both must reflect the underlying numbers.",
+    "elements": [
+      {
+        "description": "",
+        "id": "emi-charts;changing-the-start-month-changes-the-number-of-bars",
+        "keyword": "Scenario",
+        "line": 35,
+        "name": "Changing the start month changes the number of bars",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I open the EMI calculator",
+            "result": {
+              "status": "passed",
+              "duration": 162000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 36,
+            "name": "I select the \"Personal Loan\" tab",
+            "result": {
+              "status": "passed",
+              "duration": 113000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "I enter a loan amount of \"10L\", an interest rate of 12% and a tenure of 5 years",
+            "result": {
+              "status": "passed",
+              "duration": 41000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "I change the schedule start month to \"2027-01\"",
+            "result": {
+              "status": "passed",
+              "duration": 20000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "the bar chart should have one bar per calendar year of the schedule",
+            "result": {
+              "status": "passed",
+              "duration": 18000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 40,
+            "name": "I change the schedule start month to \"2027-07\"",
+            "result": {
+              "status": "passed",
+              "duration": 24000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "the bar chart should have one bar per calendar year of the schedule",
+            "result": {
+              "status": "passed",
+              "duration": 14000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 42000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@charts",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "emi-charts;pie-chart-shows-a-non-zero-principal-/-interest-break-up-—-25l-@-10%-for-10y",
+        "keyword": "Scenario Outline",
+        "line": 21,
+        "name": "Pie chart shows a non-zero principal / interest break-up — 25L @ 10% for 10y",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I open the EMI calculator",
+            "result": {
+              "status": "passed",
+              "duration": 162000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I select the \"Home Loan\" tab",
+            "result": {
+              "status": "passed",
+              "duration": 112000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I enter a loan amount of \"25L\", an interest rate of 10% and a tenure of 10 years",
+            "result": {
+              "status": "passed",
+              "duration": 51000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I submit the loan details",
+            "result": {
+              "status": "passed",
+              "duration": 49000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "the break-up pie chart should be visible",
+            "result": {
+              "status": "passed",
+              "duration": 20000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "both pie chart slices should have values greater than zero",
+            "result": {
+              "status": "passed",
+              "duration": 56000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "the pie chart slices should equal the principal and my calculated total interest",
+            "result": {
+              "status": "passed",
+              "duration": 55000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "the pie chart legend should show the same values as the slices",
+            "result": {
+              "status": "passed",
+              "duration": 60000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 41000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@charts",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 9
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "emi-charts;pie-chart-shows-a-non-zero-principal-/-interest-break-up-—-50l-@-7.5%-for-15y",
+        "keyword": "Scenario Outline",
+        "line": 22,
+        "name": "Pie chart shows a non-zero principal / interest break-up — 50L @ 7.5% for 15y",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I open the EMI calculator",
+            "result": {
+              "status": "passed",
+              "duration": 160000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I select the \"Home Loan\" tab",
+            "result": {
+              "status": "passed",
+              "duration": 111000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I enter a loan amount of \"50L\", an interest rate of 7.5% and a tenure of 15 years",
+            "result": {
+              "status": "passed",
+              "duration": 45000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I submit the loan details",
+            "result": {
+              "status": "passed",
+              "duration": 62000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "the break-up pie chart should be visible",
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "both pie chart slices should have values greater than zero",
+            "result": {
+              "status": "passed",
+              "duration": 54000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "the pie chart slices should equal the principal and my calculated total interest",
+            "result": {
+              "status": "passed",
+              "duration": 59000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "the pie chart legend should show the same values as the slices",
+            "result": {
+              "status": "passed",
+              "duration": 68000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 42000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@charts",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 9
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "emi-charts;bar-chart-follows-the-schedule-start-month-and-its-tooltip-shows-correct-values",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "Bar chart follows the schedule start month and its tooltip shows correct values",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I open the EMI calculator",
+            "result": {
+              "status": "passed",
+              "duration": 161000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 25,
+            "name": "I select the \"Personal Loan\" tab",
+            "result": {
+              "status": "passed",
+              "duration": 119000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I set the loan amount slider to \"10L\", the interest rate slider to 12% and the tenure slider to 5 years",
+            "result": {
+              "status": "passed",
+              "duration": 587000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "I change the schedule start month to \"2026-11\"",
+            "result": {
+              "status": "passed",
+              "duration": 22000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "the yearly bar chart should be visible",
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "the bar chart should have one bar per calendar year of the schedule",
+            "result": {
+              "status": "passed",
+              "duration": 14000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "every bar should have non-zero principal and interest",
+            "result": {
+              "status": "passed",
+              "duration": 129000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "the bars' principal should add up to the loan amount",
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "I hover over the bar for 2028",
+            "result": {
+              "status": "passed",
+              "duration": 55000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "the tooltip should show the 2028 principal, interest and balance from my own schedule",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 52000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@charts",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "ui-›-emi-charts",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "EMI charts",
+    "tags": [
+      {
+        "name": "@ui",
+        "line": 1
+      },
+      {
+        "name": "@charts",
+        "line": 1
+      }
+    ],
+    "uri": "tests/features/ui/charts.feature"
+  },
+  {
+    "description": "  As a borrower\n  I want to calculate my monthly EMI\n  So that I know what a loan will cost me",
+    "elements": [
+      {
+        "description": "",
+        "id": "emi-calculator;calculated-emi-matches-an-independently-computed-value-—-home-loan-25l-@-10%-for-10y",
+        "keyword": "Scenario Outline",
+        "line": 20,
+        "name": "Calculated EMI matches an independently computed value — Home Loan 25L @ 10% for 10y",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open the EMI calculator",
+            "result": {
+              "status": "passed",
+              "duration": 70000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I select the \"Home Loan\" tab",
+            "result": {
+              "status": "passed",
+              "duration": 30000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I enter a loan amount of \"25L\", an interest rate of 10% and a tenure of 10 years",
+            "result": {
+              "status": "passed",
+              "duration": 69000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I submit the loan details",
+            "result": {
+              "status": "passed",
+              "duration": 52000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "the EMI, total interest and total payment should match my own calculation",
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "paying that EMI every month should clear the loan exactly",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 35000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@calculator",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 10
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "emi-calculator;calculated-emi-matches-an-independently-computed-value-—-home-loan-50l-@-7.5%-for-15y",
+        "keyword": "Scenario Outline",
+        "line": 21,
+        "name": "Calculated EMI matches an independently computed value — Home Loan 50L @ 7.5% for 15y",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open the EMI calculator",
+            "result": {
+              "status": "passed",
+              "duration": 70000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I select the \"Home Loan\" tab",
+            "result": {
+              "status": "passed",
+              "duration": 37000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I enter a loan amount of \"50L\", an interest rate of 7.5% and a tenure of 15 years",
+            "result": {
+              "status": "passed",
+              "duration": 78000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I submit the loan details",
+            "result": {
+              "status": "passed",
+              "duration": 55000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "the EMI, total interest and total payment should match my own calculation",
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "paying that EMI every month should clear the loan exactly",
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 44000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@calculator",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 10
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "emi-calculator;calculated-emi-matches-an-independently-computed-value-—-personal-loan-10l-@-12%-for-5y",
+        "keyword": "Scenario Outline",
+        "line": 22,
+        "name": "Calculated EMI matches an independently computed value — Personal Loan 10L @ 12% for 5y",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open the EMI calculator",
+            "result": {
+              "status": "passed",
+              "duration": 62000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I select the \"Personal Loan\" tab",
+            "result": {
+              "status": "passed",
+              "duration": 45000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I enter a loan amount of \"10L\", an interest rate of 12% and a tenure of 5 years",
+            "result": {
+              "status": "passed",
+              "duration": 62000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I submit the loan details",
+            "result": {
+              "status": "passed",
+              "duration": 52000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "the EMI, total interest and total payment should match my own calculation",
+            "result": {
+              "status": "passed",
+              "duration": 15000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "paying that EMI every month should clear the loan exactly",
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 58000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@calculator",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 10
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "emi-calculator;calculated-emi-matches-an-independently-computed-value-—-car-loan-8l-@-9.25%-for-7y",
+        "keyword": "Scenario Outline",
+        "line": 23,
+        "name": "Calculated EMI matches an independently computed value — Car Loan 8L @ 9.25% for 7y",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open the EMI calculator",
+            "result": {
+              "status": "passed",
+              "duration": 68000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I select the \"Car Loan\" tab",
+            "result": {
+              "status": "passed",
+              "duration": 39000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I enter a loan amount of \"8L\", an interest rate of 9.25% and a tenure of 7 years",
+            "result": {
+              "status": "passed",
+              "duration": 61000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I submit the loan details",
+            "result": {
+              "status": "passed",
+              "duration": 43000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "the EMI, total interest and total payment should match my own calculation",
+            "result": {
+              "status": "passed",
+              "duration": 18000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "paying that EMI every month should clear the loan exactly",
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 35000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@calculator",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 10
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "emi-calculator;calculated-emi-matches-an-independently-computed-value-—-home-loan-2cr-@-5%-for-30y",
+        "keyword": "Scenario Outline",
+        "line": 24,
+        "name": "Calculated EMI matches an independently computed value — Home Loan 2Cr @ 5% for 30y",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open the EMI calculator",
+            "result": {
+              "status": "passed",
+              "duration": 66000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I select the \"Home Loan\" tab",
+            "result": {
+              "status": "passed",
+              "duration": 37000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I enter a loan amount of \"2Cr\", an interest rate of 5% and a tenure of 30 years",
+            "result": {
+              "status": "passed",
+              "duration": 68000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I submit the loan details",
+            "result": {
+              "status": "passed",
+              "duration": 79000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "the EMI, total interest and total payment should match my own calculation",
+            "result": {
+              "status": "passed",
+              "duration": 18000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "paying that EMI every month should clear the loan exactly",
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 32000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@calculator",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 10
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "emi-calculator;calculated-emi-matches-an-independently-computed-value-—-personal-loan-10k-@-30%-for-1y",
+        "keyword": "Scenario Outline",
+        "line": 25,
+        "name": "Calculated EMI matches an independently computed value — Personal Loan 10K @ 30% for 1y",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open the EMI calculator",
+            "result": {
+              "status": "passed",
+              "duration": 56000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I select the \"Personal Loan\" tab",
+            "result": {
+              "status": "passed",
+              "duration": 86000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I enter a loan amount of \"10K\", an interest rate of 30% and a tenure of 1 years",
+            "result": {
+              "status": "passed",
+              "duration": 38000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I submit the loan details",
+            "result": {
+              "status": "passed",
+              "duration": 45000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "the EMI, total interest and total payment should match my own calculation",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "paying that EMI every month should clear the loan exactly",
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 41000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@calculator",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 10
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "emi-calculator;out-of-range-input-is-rejected-with-an-accessible-error-—-amount-=-\"0\"",
+        "keyword": "Scenario Outline",
+        "line": 42,
+        "name": "Out-of-range input is rejected with an accessible error — amount = \"0\"",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open the EMI calculator",
+            "result": {
+              "status": "passed",
+              "duration": 74000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 33,
+            "name": "I select the \"Home Loan\" tab",
+            "result": {
+              "status": "passed",
+              "duration": 29000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "I enter a loan amount of \"25L\", an interest rate of 10% and a tenure of 10 years",
+            "result": {
+              "status": "passed",
+              "duration": 72000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "I submit the loan details",
+            "result": {
+              "status": "passed",
+              "duration": 50000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 36,
+            "name": "I change the \"amount\" field to \"0\" and submit",
+            "result": {
+              "status": "passed",
+              "duration": 54000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "the \"amount\" field should report the error \"Must be between 1,00,000 and 2,00,00,000.\"",
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "the previously calculated results should remain unchanged",
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@calculator",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "emi-calculator;out-of-range-input-is-rejected-with-an-accessible-error-—-amount-=-\"30000000\"",
+        "keyword": "Scenario Outline",
+        "line": 43,
+        "name": "Out-of-range input is rejected with an accessible error — amount = \"30000000\"",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open the EMI calculator",
+            "result": {
+              "status": "passed",
+              "duration": 75000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 33,
+            "name": "I select the \"Home Loan\" tab",
+            "result": {
+              "status": "passed",
+              "duration": 32000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "I enter a loan amount of \"25L\", an interest rate of 10% and a tenure of 10 years",
+            "result": {
+              "status": "passed",
+              "duration": 67000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "I submit the loan details",
+            "result": {
+              "status": "passed",
+              "duration": 50000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 36,
+            "name": "I change the \"amount\" field to \"30000000\" and submit",
+            "result": {
+              "status": "passed",
+              "duration": 43000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "the \"amount\" field should report the error \"Must be between 1,00,000 and 2,00,00,000.\"",
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "the previously calculated results should remain unchanged",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 41000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@calculator",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "emi-calculator;out-of-range-input-is-rejected-with-an-accessible-error-—-amount-=-\"\"",
+        "keyword": "Scenario Outline",
+        "line": 44,
+        "name": "Out-of-range input is rejected with an accessible error — amount = \"\"",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open the EMI calculator",
+            "result": {
+              "status": "passed",
+              "duration": 76000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 33,
+            "name": "I select the \"Home Loan\" tab",
+            "result": {
+              "status": "passed",
+              "duration": 42000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "I enter a loan amount of \"25L\", an interest rate of 10% and a tenure of 10 years",
+            "result": {
+              "status": "passed",
+              "duration": 62000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "I submit the loan details",
+            "result": {
+              "status": "passed",
+              "duration": 55000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 36,
+            "name": "I change the \"amount\" field to \"\" and submit",
+            "result": {
+              "status": "passed",
+              "duration": 52000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "the \"amount\" field should report the error \"Please enter a number.\"",
+            "result": {
+              "status": "passed",
+              "duration": 18000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "the previously calculated results should remain unchanged",
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 43000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@calculator",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "emi-calculator;out-of-range-input-is-rejected-with-an-accessible-error-—-rate-=-\"35\"",
+        "keyword": "Scenario Outline",
+        "line": 45,
+        "name": "Out-of-range input is rejected with an accessible error — rate = \"35\"",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open the EMI calculator",
+            "result": {
+              "status": "passed",
+              "duration": 60000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 33,
+            "name": "I select the \"Home Loan\" tab",
+            "result": {
+              "status": "passed",
+              "duration": 44000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "I enter a loan amount of \"25L\", an interest rate of 10% and a tenure of 10 years",
+            "result": {
+              "status": "passed",
+              "duration": 71000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "I submit the loan details",
+            "result": {
+              "status": "passed",
+              "duration": 42000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 36,
+            "name": "I change the \"rate\" field to \"35\" and submit",
+            "result": {
+              "status": "passed",
+              "duration": 43000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "the \"rate\" field should report the error \"Must be between 5 and 20.\"",
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "the previously calculated results should remain unchanged",
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 44000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@calculator",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "emi-calculator;out-of-range-input-is-rejected-with-an-accessible-error-—-rate-=-\"-1\"",
+        "keyword": "Scenario Outline",
+        "line": 46,
+        "name": "Out-of-range input is rejected with an accessible error — rate = \"-1\"",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open the EMI calculator",
+            "result": {
+              "status": "passed",
+              "duration": 72000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 33,
+            "name": "I select the \"Home Loan\" tab",
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "I enter a loan amount of \"25L\", an interest rate of 10% and a tenure of 10 years",
+            "result": {
+              "status": "passed",
+              "duration": 72000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "I submit the loan details",
+            "result": {
+              "status": "passed",
+              "duration": 47000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 36,
+            "name": "I change the \"rate\" field to \"-1\" and submit",
+            "result": {
+              "status": "passed",
+              "duration": 38000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "the \"rate\" field should report the error \"Must be between 5 and 20.\"",
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "the previously calculated results should remain unchanged",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@calculator",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "emi-calculator;values-set-by-dragging-the-sliders-produce-the-correct-emi",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "Values set by dragging the sliders produce the correct EMI",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open the EMI calculator",
+            "result": {
+              "status": "passed",
+              "duration": 74000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 28,
+            "name": "I select the \"Personal Loan\" tab",
+            "result": {
+              "status": "passed",
+              "duration": 80000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 29,
+            "name": "I set the loan amount slider to \"10L\", the interest rate slider to 12% and the tenure slider to 5 years",
+            "result": {
+              "status": "passed",
+              "duration": 519000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "the EMI, total interest and total payment should match my own calculation",
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 30000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@calculator",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "emi-calculator;out-of-range-input-is-rejected-with-an-accessible-error-—-tenure-=-\"0\"",
+        "keyword": "Scenario Outline",
+        "line": 47,
+        "name": "Out-of-range input is rejected with an accessible error — tenure = \"0\"",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open the EMI calculator",
+            "result": {
+              "status": "passed",
+              "duration": 69000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 33,
+            "name": "I select the \"Home Loan\" tab",
+            "result": {
+              "status": "passed",
+              "duration": 81000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "I enter a loan amount of \"25L\", an interest rate of 10% and a tenure of 10 years",
+            "result": {
+              "status": "passed",
+              "duration": 36000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "I submit the loan details",
+            "result": {
+              "status": "passed",
+              "duration": 35000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 36,
+            "name": "I change the \"tenure\" field to \"0\" and submit",
+            "result": {
+              "status": "passed",
+              "duration": 45000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "the \"tenure\" field should report the error \"Must be between 1 and 30.\"",
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "the previously calculated results should remain unchanged",
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 38000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@calculator",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "emi-calculator;out-of-range-input-is-rejected-with-an-accessible-error-—-tenure-=-\"2.5\"",
+        "keyword": "Scenario Outline",
+        "line": 48,
+        "name": "Out-of-range input is rejected with an accessible error — tenure = \"2.5\"",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open the EMI calculator",
+            "result": {
+              "status": "passed",
+              "duration": 63000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 33,
+            "name": "I select the \"Home Loan\" tab",
+            "result": {
+              "status": "passed",
+              "duration": 43000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "I enter a loan amount of \"25L\", an interest rate of 10% and a tenure of 10 years",
+            "result": {
+              "status": "passed",
+              "duration": 59000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "I submit the loan details",
+            "result": {
+              "status": "passed",
+              "duration": 32000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 36,
+            "name": "I change the \"tenure\" field to \"2.5\" and submit",
+            "result": {
+              "status": "passed",
+              "duration": 29000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "the \"tenure\" field should report the error \"Tenure must be a whole number of years.\"",
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "the previously calculated results should remain unchanged",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 28000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@calculator",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "ui-›-emi-calculator",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "EMI calculator",
+    "tags": [
+      {
+        "name": "@ui",
+        "line": 1
+      },
+      {
+        "name": "@calculator",
+        "line": 1
+      }
+    ],
+    "uri": "tests/features/ui/emi-calculator.feature"
+  },
+  {
+    "description": "  The API should handle boundary and invalid input with appropriate 4xx codes or\n  error messages and never fail server-side (5xx).\n\n  JSONPlaceholder is a fake API: it accepts any JSON and echoes it back with\n  201. Scenarios tagged @known-defect assert the *expected* behaviour and are\n  marked @fail (expected to fail) so the suite stays green while the defects\n  stay visible in the report. If the API is ever fixed, those scenarios will\n  start \"unexpectedly passing\" and flag it.",
+    "elements": [
+      {
+        "description": "",
+        "id": "jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts;excessively-long-titles;a-255-character-title-is-handled-without-a-server-error",
+        "keyword": "Scenario Outline",
+        "line": 24,
+        "name": "A 255-character title is handled without a server error",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I create a post with a title of 255 characters",
+            "result": {
+              "status": "passed",
+              "duration": 625000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "the response should not be a server error",
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "the response status should be 201",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "the response should be JSON",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "the echoed \"title\" should be identical to what was sent",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "the response should arrive within the configured time limit",
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts;excessively-long-titles;a-256-character-title-is-handled-without-a-server-error",
+        "keyword": "Scenario Outline",
+        "line": 25,
+        "name": "A 256-character title is handled without a server error",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I create a post with a title of 256 characters",
+            "result": {
+              "status": "passed",
+              "duration": 566000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "the response should not be a server error",
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "the response status should be 201",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "the response should be JSON",
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "the echoed \"title\" should be identical to what was sent",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "the response should arrive within the configured time limit",
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts;excessively-long-titles;a-10000-character-title-is-handled-without-a-server-error",
+        "keyword": "Scenario Outline",
+        "line": 26,
+        "name": "A 10000-character title is handled without a server error",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I create a post with a title of 10000 characters",
+            "result": {
+              "status": "passed",
+              "duration": 1157000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "the response should not be a server error",
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "the response status should be 201",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "the response should be JSON",
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "the echoed \"title\" should be identical to what was sent",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "the response should arrive within the configured time limit",
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts;unsupported-special-characters;title-with-sql-injection-is-stored-without-server-error-or-corruption",
+        "keyword": "Scenario Outline",
+        "line": 47,
+        "name": "Title with SQL injection is stored without server error or corruption",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "I create a post whose title contains \"SQL injection\"",
+            "result": {
+              "status": "passed",
+              "duration": 1111000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "the response should not be a server error",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "the response status should be 201",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "the response should be JSON",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "the echoed \"title\" should be identical to what was sent",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts;unsupported-special-characters;title-with-html-and-script-injection-is-stored-without-server-error-or-corruption",
+        "keyword": "Scenario Outline",
+        "line": 46,
+        "name": "Title with HTML and script injection is stored without server error or corruption",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "I create a post whose title contains \"HTML and script injection\"",
+            "result": {
+              "status": "passed",
+              "duration": 1258000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "the response should not be a server error",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "the response status should be 201",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "the response should be JSON",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "the echoed \"title\" should be identical to what was sent",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts;unsupported-special-characters;title-with-rtl-override-and-zero-width-is-stored-without-server-error-or-corruption",
+        "keyword": "Scenario Outline",
+        "line": 49,
+        "name": "Title with RTL override and zero-width is stored without server error or corruption",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "I create a post whose title contains \"RTL override and zero-width\"",
+            "result": {
+              "status": "passed",
+              "duration": 1014000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "the response should not be a server error",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "the response status should be 201",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "the response should be JSON",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "the echoed \"title\" should be identical to what was sent",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts;unsupported-special-characters;title-with-emoji-and-astral-unicode-is-stored-without-server-error-or-corruption",
+        "keyword": "Scenario Outline",
+        "line": 48,
+        "name": "Title with emoji and astral unicode is stored without server error or corruption",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "I create a post whose title contains \"emoji and astral unicode\"",
+            "result": {
+              "status": "passed",
+              "duration": 1572000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "the response should not be a server error",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "the response status should be 201",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "the response should be JSON",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "the echoed \"title\" should be identical to what was sent",
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts;unsupported-special-characters;title-with-control-characters-is-stored-without-server-error-or-corruption",
+        "keyword": "Scenario Outline",
+        "line": 50,
+        "name": "Title with control characters is stored without server error or corruption",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "I create a post whose title contains \"control characters\"",
+            "result": {
+              "status": "passed",
+              "duration": 1019000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "the response should not be a server error",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "the response status should be 201",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "the response should be JSON",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "the echoed \"title\" should be identical to what was sent",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts;excessively-long-titles;a-1000000-character-title-is-handled-without-a-server-error",
+        "keyword": "Scenario Outline",
+        "line": 27,
+        "name": "A 1000000-character title is handled without a server error",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I create a post with a title of 1000000 characters",
+            "result": {
+              "status": "passed",
+              "duration": 3558000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "the response should not be a server error",
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "the response status should be 201",
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "the response should be JSON",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "the echoed \"title\" should be identical to what was sent",
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "the response should arrive within the configured time limit",
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts;unsupported-special-characters;title-with-mixed-scripts-is-stored-without-server-error-or-corruption",
+        "keyword": "Scenario Outline",
+        "line": 52,
+        "name": "Title with mixed scripts is stored without server error or corruption",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "I create a post whose title contains \"mixed scripts\"",
+            "result": {
+              "status": "passed",
+              "duration": 1029000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "the response should not be a server error",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "the response status should be 201",
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "the response should be JSON",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "the echoed \"title\" should be identical to what was sent",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts;missing-or-invalid-required-fields;post-with-no-userid-does-not-cause-a-server-error",
+        "keyword": "Scenario Outline",
+        "line": 63,
+        "name": "Post with no userId does not cause a server error",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 57,
+            "name": "I create a post with no userId",
+            "result": {
+              "status": "passed",
+              "duration": 1057000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 58,
+            "name": "the response should not be a server error",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 59,
+            "name": "the response should be JSON",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts;unsupported-special-characters;title-with-json-metacharacters-is-stored-without-server-error-or-corruption",
+        "keyword": "Scenario Outline",
+        "line": 51,
+        "name": "Title with JSON metacharacters is stored without server error or corruption",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "I create a post whose title contains \"JSON metacharacters\"",
+            "result": {
+              "status": "passed",
+              "duration": 1295000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "the response should not be a server error",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "the response status should be 201",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "the response should be JSON",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "the echoed \"title\" should be identical to what was sent",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts;missing-or-invalid-required-fields;post-with-no-title-does-not-cause-a-server-error",
+        "keyword": "Scenario Outline",
+        "line": 64,
+        "name": "Post with no title does not cause a server error",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 57,
+            "name": "I create a post with no title",
+            "result": {
+              "status": "passed",
+              "duration": 1316000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 58,
+            "name": "the response should not be a server error",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 59,
+            "name": "the response should be JSON",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts;missing-or-invalid-required-fields;post-with-an-empty-body-does-not-cause-a-server-error",
+        "keyword": "Scenario Outline",
+        "line": 65,
+        "name": "Post with an empty body does not cause a server error",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 57,
+            "name": "I create a post with an empty body",
+            "result": {
+              "status": "passed",
+              "duration": 1464000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 58,
+            "name": "the response should not be a server error",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 59,
+            "name": "the response should be JSON",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts;missing-or-invalid-required-fields;post-with-a-negative-userid-does-not-cause-a-server-error",
+        "keyword": "Scenario Outline",
+        "line": 67,
+        "name": "Post with a negative userId does not cause a server error",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 57,
+            "name": "I create a post with a negative userId",
+            "result": {
+              "status": "passed",
+              "duration": 1431000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 58,
+            "name": "the response should not be a server error",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 59,
+            "name": "the response should be JSON",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts;missing-or-invalid-required-fields;post-with-a-string-userid-does-not-cause-a-server-error",
+        "keyword": "Scenario Outline",
+        "line": 66,
+        "name": "Post with a string userId does not cause a server error",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 57,
+            "name": "I create a post with a string userId",
+            "result": {
+              "status": "passed",
+              "duration": 1773000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 58,
+            "name": "the response should not be a server error",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 59,
+            "name": "the response should be JSON",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts;missing-or-invalid-required-fields;post-with-a-null-title-does-not-cause-a-server-error",
+        "keyword": "Scenario Outline",
+        "line": 68,
+        "name": "Post with a null title does not cause a server error",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 57,
+            "name": "I create a post with a null title",
+            "result": {
+              "status": "passed",
+              "duration": 1782000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 58,
+            "name": "the response should not be a server error",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 59,
+            "name": "the response should be JSON",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts;missing-or-invalid-required-fields;post-with-no-userid-is-rejected-with-400-bad-request",
+        "keyword": "Scenario Outline",
+        "line": 78,
+        "name": "Post with no userId is rejected with 400 Bad Request",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 72,
+            "name": "I create a post with no userId",
+            "result": {
+              "status": "passed",
+              "duration": 1711000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 73,
+            "name": "the response status should be 400",
+            "result": {
+              "status": "failed",
+              "duration": 4000000,
+              "error_message": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 400\nReceived: 201\n\n   at ../tests/steps/api/posts.steps.ts:53\n\n  51 |   const res = response(ctx);\n  52 |   await attachResponse($testInfo, res);\n> 53 |   expect(res.status).toBe(status);\n     |                      ^\n  54 | });\n  55 |\n  56 | Then('the response should be JSON', async ({ ctx }) => {\n\n    at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/api/posts.steps.ts:53:22)\n    at /Users/adarshahalder/projects/testt/.features-gen/api/posts-boundary.feature.spec.js:167:9"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          },
+          {
+            "name": "@known-defect",
+            "line": 70
+          },
+          {
+            "name": "@fail",
+            "line": 70
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts;missing-or-invalid-required-fields;post-with-an-empty-body-is-rejected-with-400-bad-request",
+        "keyword": "Scenario Outline",
+        "line": 79,
+        "name": "Post with an empty body is rejected with 400 Bad Request",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 72,
+            "name": "I create a post with an empty body",
+            "result": {
+              "status": "passed",
+              "duration": 1639000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 73,
+            "name": "the response status should be 400",
+            "result": {
+              "status": "failed",
+              "duration": 4000000,
+              "error_message": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 400\nReceived: 201\n\n   at ../tests/steps/api/posts.steps.ts:53\n\n  51 |   const res = response(ctx);\n  52 |   await attachResponse($testInfo, res);\n> 53 |   expect(res.status).toBe(status);\n     |                      ^\n  54 | });\n  55 |\n  56 | Then('the response should be JSON', async ({ ctx }) => {\n\n    at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/api/posts.steps.ts:53:22)\n    at /Users/adarshahalder/projects/testt/.features-gen/api/posts-boundary.feature.spec.js:172:9"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          },
+          {
+            "name": "@known-defect",
+            "line": 70
+          },
+          {
+            "name": "@fail",
+            "line": 70
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts;missing-or-invalid-required-fields;post-with-a-string-userid-is-rejected-with-400-bad-request",
+        "keyword": "Scenario Outline",
+        "line": 80,
+        "name": "Post with a string userId is rejected with 400 Bad Request",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 72,
+            "name": "I create a post with a string userId",
+            "result": {
+              "status": "passed",
+              "duration": 1398000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 73,
+            "name": "the response status should be 400",
+            "result": {
+              "status": "failed",
+              "duration": 3000000,
+              "error_message": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 400\nReceived: 201\n\n   at ../tests/steps/api/posts.steps.ts:53\n\n  51 |   const res = response(ctx);\n  52 |   await attachResponse($testInfo, res);\n> 53 |   expect(res.status).toBe(status);\n     |                      ^\n  54 | });\n  55 |\n  56 | Then('the response should be JSON', async ({ ctx }) => {\n\n    at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/api/posts.steps.ts:53:22)\n    at /Users/adarshahalder/projects/testt/.features-gen/api/posts-boundary.feature.spec.js:177:9"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          },
+          {
+            "name": "@known-defect",
+            "line": 70
+          },
+          {
+            "name": "@fail",
+            "line": 70
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts;malformed-requests;malformed-json-is-rejected-with-400,-not-a-server-error",
+        "keyword": "Scenario",
+        "line": 85,
+        "name": "Malformed JSON is rejected with 400, not a server error",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 86,
+            "name": "I send a post with a malformed JSON body",
+            "result": {
+              "status": "passed",
+              "duration": 1092000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 87,
+            "name": "the response should not be a server error",
+            "result": {
+              "status": "failed",
+              "duration": 1000000,
+              "error_message": "Error: server error body: SyntaxError: Expected ',' or '}' after property value in JSON at position 37 (line 1 column 38)\n    at JSON.parse (<anonymous>)\n    at parse (/app/node_modules/body-parser/lib/types/json.js:89:19)\n   \n\nexpect(received).toBeLessThan(expected)\n\nExpected: < 500\nReceived:   500\n\n   at ../tests/steps/api/posts.steps.ts:47\n\n  45 |   const res = response(ctx);\n  46 |   await attachResponse($testInfo, res);\n> 47 |   expect(res.status, `server error body: ${res.rawBody.slice(0, 200)}`).toBeLessThan(500);\n     |                                                                         ^\n  48 | });\n  49 |\n  50 | Then('the response status should be {int}', async ({ ctx, $testInfo }, status: number) => {\n\n    at JSON.parse (<anonymous>)\n    at parse (/app/node_modules/body-parser/lib/types/json.js:89:19)\n    at parse (/app/node_modules/body-parser/lib/types/json.js:89:19)\n    at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/api/posts.steps.ts:47:73)\n    at /Users/adarshahalder/projects/testt/.features-gen/api/posts-boundary.feature.spec.js:189:7"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 88,
+            "name": "the response status should be 400",
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          },
+          {
+            "name": "@known-defect",
+            "line": 84
+          },
+          {
+            "name": "@fail",
+            "line": 84
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts;malformed-requests;error-responses-do-not-leak-server-internals",
+        "keyword": "Scenario",
+        "line": 92,
+        "name": "Error responses do not leak server internals",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 93,
+            "name": "I send a post with a malformed JSON body",
+            "result": {
+              "status": "passed",
+              "duration": 998000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 94,
+            "name": "the response body should not contain a stack trace",
+            "result": {
+              "status": "failed",
+              "duration": 3000000,
+              "error_message": "Error: expect(received).not.toMatch(expected)\n\nExpected pattern: not /\\n\\s+at .+\\(.+:\\d+:\\d+\\)/\nReceived string:      \"SyntaxError: Expected ',' or '}' after property value in JSON at position 37 (line 1 column 38)\n    at JSON.parse (<anonymous>)\n    at parse (/app/node_modules/body-parser/lib/types/json.js:89:19)\n    at /app/node_modules/body-parser/lib/read.js:121:18\n    at invokeCallback (/app/node_modules/body-parser/node_modules/raw-body/index.js:224:16)\n    at done (/app/node_modules/body-parser/node_modules/raw-body/index.js:213:7)\n    at IncomingMessage.onEnd (/app/node_modules/body-parser/node_modules/raw-body/index.js:273:7)\n    at IncomingMessage.emit (node:events:514:28)\n    at endReadableNT (node:internal/streams/readable:1764:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)\"\n\n   at ../tests/steps/api/posts.steps.ts:76\n\n  74 |\n  75 | Then('the response body should not contain a stack trace', async ({ ctx }) => {\n> 76 |   expect(response(ctx).rawBody).not.toMatch(/\\n\\s+at .+\\(.+:\\d+:\\d+\\)/);\n     |                                     ^\n  77 | });\n  78 |\n\n    at JSON.parse (<anonymous>)\n    at parse (/app/node_modules/body-parser/lib/types/json.js:89:19)\n    at /app/node_modules/body-parser/lib/read.js:121:18\n    at invokeCallback (/app/node_modules/body-parser/node_modules/raw-body/index.js:224:16)\n    at done (/app/node_modules/body-parser/node_modules/raw-body/index.js:213:7)\n    at IncomingMessage.onEnd (/app/node_modules/body-parser/node_modules/raw-body/index.js:273:7)\n    at IncomingMessage.emit (node:events:514:28)\n    at endReadableNT (node:internal/streams/readable:1764:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)\"\n    at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/api/posts.steps.ts:76:37)\n    at /Users/adarshahalder/projects/testt/.features-gen/api/posts-boundary.feature.spec.js:196:7"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          },
+          {
+            "name": "@known-defect",
+            "line": 91
+          },
+          {
+            "name": "@fail",
+            "line": 91
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts;excessively-long-titles;a-payload-above-the-server's-body-limit-is-rejected-with-413,-not-500",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "A payload above the server's body limit is rejected with 413, not 500",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "I create a post with a title of 11000000 characters",
+            "result": {
+              "status": "passed",
+              "duration": 11832000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 32,
+            "name": "the response status should be 413",
+            "result": {
+              "status": "failed",
+              "duration": 7000000,
+              "error_message": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 413\nReceived: 500\n\n   at ../tests/steps/api/posts.steps.ts:53\n\n  51 |   const res = response(ctx);\n  52 |   await attachResponse($testInfo, res);\n> 53 |   expect(res.status).toBe(status);\n     |                      ^\n  54 | });\n  55 |\n  56 | Then('the response should be JSON', async ({ ctx }) => {\n\n    at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/api/posts.steps.ts:53:22)\n    at /Users/adarshahalder/projects/testt/.features-gen/api/posts-boundary.feature.spec.js:51:7"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          },
+          {
+            "name": "@known-defect",
+            "line": 29
+          },
+          {
+            "name": "@fail",
+            "line": 29
+          },
+          {
+            "name": "@slow",
+            "line": 29
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "api-›-jsonplaceholder-—-boundary-and-invalid-data-on-post-/posts",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "JSONPlaceholder — boundary and invalid data on POST /posts",
+    "tags": [
+      {
+        "name": "@api",
+        "line": 1
+      }
+    ],
+    "uri": "tests/features/api/posts-boundary.feature"
+  },
+  {
+    "description": "  Schemas, seed data and queries live in sql/. Each scenario loads them into an\n  in-memory SQLite database, runs the query, checks the result against the\n  hand-verified expectation, and saves a screenshot of the output.",
+    "elements": [
+      {
+        "description": "",
+        "id": "sql-scenarios;ipl-2024-—-players-with-30+-runs-in-at-least-3-consecutive-matches",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "IPL 2024 — players with 30+ runs in at least 3 consecutive matches",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "the \"ipl\" database is loaded with its seed data",
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "I run the \"ipl_scoring_streaks\" query",
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "player_name",
+                      "streak_start_date",
+                      "streak_end_date",
+                      "streak_matches"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Travis Head",
+                      "2024-03-24",
+                      "2024-04-03",
+                      "4"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Virat Kohli",
+                      "2024-03-30",
+                      "2024-04-07",
+                      "3"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Ruturaj Gaikwad",
+                      "2024-04-07",
+                      "2024-04-25",
+                      "4"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Abhishek Sharma",
+                      "2024-04-13",
+                      "2024-04-21",
+                      "3"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Virat Kohli",
+                      "2024-04-19",
+                      "2024-04-27",
+                      "3"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "the query should return exactly these rows:",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "these players should not appear in the results: Sunil Narine, Rohit Sharma",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "I save a screenshot of the query output",
+            "result": {
+              "status": "passed",
+              "duration": 80000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sql",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "sql-scenarios;round-trip-transfers-—-b-returns-a-similar-amount-(±10%)-to-a-within-24-hours",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Round-trip transfers — B returns a similar amount (±10%) to A within 24 hours",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "the \"banking\" database is loaded with its seed data",
+            "result": {
+              "status": "passed",
+              "duration": 14000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I run the \"round_trip_transfers\" query",
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "outbound_txn_id",
+                      "account_a",
+                      "account_b",
+                      "sent_amount",
+                      "return_txn_id",
+                      "returned_amount",
+                      "amount_diff_pct",
+                      "hours_between"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "1",
+                      "ACC001",
+                      "ACC002",
+                      "10000",
+                      "2",
+                      "9500",
+                      "5",
+                      "9.5"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "3",
+                      "ACC003",
+                      "ACC004",
+                      "50000",
+                      "4",
+                      "45000",
+                      "10",
+                      "24"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "13",
+                      "ACC009",
+                      "ACC010",
+                      "12000",
+                      "14",
+                      "13200",
+                      "10",
+                      "12"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "16",
+                      "ACC006",
+                      "ACC004",
+                      "5000",
+                      "15",
+                      "5000",
+                      "0",
+                      "1"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "17",
+                      "ACC002",
+                      "ACC001",
+                      "7000",
+                      "18",
+                      "7200",
+                      "2.86",
+                      "6"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "17",
+                      "ACC002",
+                      "ACC001",
+                      "7000",
+                      "19",
+                      "6800",
+                      "2.86",
+                      "11"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the query should return exactly these rows:",
+            "result": {
+              "status": "passed",
+              "duration": 13000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "none of these transactions should be reported: 5, 6, 7, 8, 9, 10, 11, 12",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I save a screenshot of the query output",
+            "result": {
+              "status": "passed",
+              "duration": 70000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sql",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "sql-›-sql-scenarios",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "SQL scenarios",
+    "tags": [
+      {
+        "name": "@sql",
+        "line": 1
+      }
+    ],
+    "uri": "tests/features/sql/sql-scenarios.feature"
+  }
+]

@@ -1,0 +1,276 @@
+[
+  {
+    "description": "  These scenarios use tests/pages/legacy/BrittleCalculatorPage.ts, whose locators\n  are deliberately brittle and LEFT BROKEN for the AI self-healing exercise.\n  They are excluded from the default run; execute with `npm run test:broken`\n  and repair suggestions with `npm run heal`.",
+    "elements": [
+      {
+        "description": "",
+        "id": "legacy-calculator-flow-(intentionally-broken-locators);typing-the-loan-amount-(positional-xpath-silently-drives-the-slider)",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Typing the loan amount (positional XPath silently drives the slider)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I open the calculator using the legacy page object",
+            "result": {
+              "status": "passed",
+              "duration": 89000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I type 2500000 into the legacy amount field",
+            "result": {
+              "status": "passed",
+              "duration": 24000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "the legacy amount field should contain 2500000",
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@broken",
+            "line": 1
+          },
+          {
+            "name": "@self-healing",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "legacy-calculator-flow-(intentionally-broken-locators);reading-the-emi-result-(stale-generated-id)",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "Reading the EMI result (stale generated id)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I open the calculator using the legacy page object",
+            "result": {
+              "status": "passed",
+              "duration": 105000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "the legacy EMI result should show a rupee amount",
+            "result": {
+              "status": "failed",
+              "duration": 3011000000,
+              "error_message": "TimeoutError: locator.textContent: Timeout 3000ms exceeded.\nCall log:\n  - waiting for locator('#emi-result-value-3f9a')\n\n   at ../tests/pages/legacy/BrittleCalculatorPage.ts:118\n\n  116 |\n  117 |   async emiText(): Promise<string> {\n> 118 |     return (await this.emiResult.textContent(QUICK)) ?? '';\n      |                                  ^\n  119 |   }\n  120 |\n  121 |   async totalInterestText(): Promise<string> {\n\n    at BrittleCalculatorPage.emiText (/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts:118:34)\n    at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/self-healing/brittle.steps.ts:29:29)\n    at /Users/adarshahalder/projects/testt/.features-gen/self-healing/brittle-calculator.feature.spec.js:24:5"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 80000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@broken",
+            "line": 1
+          },
+          {
+            "name": "@self-healing",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "legacy-calculator-flow-(intentionally-broken-locators);clicking-calculate-(renamed-css-class)",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "Clicking Calculate (renamed CSS class)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I open the calculator using the legacy page object",
+            "result": {
+              "status": "passed",
+              "duration": 105000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I click the legacy Calculate button",
+            "result": {
+              "status": "failed",
+              "duration": 3012000000,
+              "error_message": "TimeoutError: locator.click: Timeout 3000ms exceeded.\nCall log:\n  - waiting for locator('button.btn-calculate')\n\n   at ../tests/pages/legacy/BrittleCalculatorPage.ts:114\n\n  112 |\n  113 |   async calculate(): Promise<void> {\n> 114 |     await this.calculateButton.click(QUICK);\n      |                                ^\n  115 |   }\n  116 |\n  117 |   async emiText(): Promise<string> {\n\n    at BrittleCalculatorPage.calculate (/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts:114:32)\n    at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/self-healing/brittle.steps.ts:25:22)\n    at /Users/adarshahalder/projects/testt/.features-gen/self-healing/brittle-calculator.feature.spec.js:20:5"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 78000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@broken",
+            "line": 1
+          },
+          {
+            "name": "@self-healing",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "legacy-calculator-flow-(intentionally-broken-locators);reading-total-interest-(nth-child-chain)",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "Reading total interest (nth-child chain)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I open the calculator using the legacy page object",
+            "result": {
+              "status": "passed",
+              "duration": 123000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "the legacy total interest result should show a rupee amount",
+            "result": {
+              "status": "failed",
+              "duration": 3014000000,
+              "error_message": "TimeoutError: locator.textContent: Timeout 3000ms exceeded.\nCall log:\n  - waiting for locator('section.results dl > div:nth-child(2) > span.value')\n\n   at ../tests/pages/legacy/BrittleCalculatorPage.ts:122\n\n  120 |\n  121 |   async totalInterestText(): Promise<string> {\n> 122 |     return (await this.totalInterestResult.textContent(QUICK)) ?? '';\n      |                                            ^\n  123 |   }\n  124 | }\n  125 |\n\n    at BrittleCalculatorPage.totalInterestText (/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts:122:44)\n    at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/self-healing/brittle.steps.ts:33:29)\n    at /Users/adarshahalder/projects/testt/.features-gen/self-healing/brittle-calculator.feature.spec.js:28:5"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 71000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@broken",
+            "line": 1
+          },
+          {
+            "name": "@self-healing",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "legacy-calculator-flow-(intentionally-broken-locators);typing-the-interest-rate-(absolute-xpath)",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Typing the interest rate (absolute XPath)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I open the calculator using the legacy page object",
+            "result": {
+              "status": "passed",
+              "duration": 110000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I type 10 into the legacy interest rate field",
+            "result": {
+              "status": "failed",
+              "duration": 3016000000,
+              "error_message": "TimeoutError: locator.fill: Timeout 3000ms exceeded.\nCall log:\n  - waiting for locator('xpath=/html/body/div[1]/main/form/div[2]/input[1]')\n\n   at ../tests/pages/legacy/BrittleCalculatorPage.ts:110\n\n  108 |\n  109 |   async enterRate(rate: number): Promise<void> {\n> 110 |     await this.rateInput.fill(String(rate), QUICK);\n      |                          ^\n  111 |   }\n  112 |\n  113 |   async calculate(): Promise<void> {\n\n    at BrittleCalculatorPage.enterRate (/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts:110:26)\n    at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/self-healing/brittle.steps.ts:21:22)\n    at /Users/adarshahalder/projects/testt/.features-gen/self-healing/brittle-calculator.feature.spec.js:16:5"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 77000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@broken",
+            "line": 1
+          },
+          {
+            "name": "@self-healing",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "self-healing-›-legacy-calculator-flow-(intentionally-broken-locators)",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Legacy calculator flow (intentionally broken locators)",
+    "tags": [
+      {
+        "name": "@broken",
+        "line": 1
+      },
+      {
+        "name": "@self-healing",
+        "line": 1
+      }
+    ],
+    "uri": "tests/features/self-healing/brittle-calculator.feature"
+  }
+]

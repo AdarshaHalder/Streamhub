@@ -1,0 +1,199 @@
+<testsuites id="" name="" tests="5" failures="0" skipped="0" errors="4" time="3.958847">
+<testsuite name="self-healing/brittle-calculator.feature.spec.js" timestamp="2026-10-06T07:18:58.101Z" hostname="self-healing" tests="5" failures="0" skipped="0" time="13.54" errors="4">
+<testcase name="Legacy calculator flow (intentionally broken locators) › Typing the loan amount (positional XPath silently drives the slider)" classname="self-healing/brittle-calculator.feature.spec.js" time="0.301">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/self-healing-brittle-calcu-2f6af-silently-drives-the-slider--self-healing/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Legacy calculator flow (intentionally broken locators) › Typing the interest rate (absolute XPath)" classname="self-healing/brittle-calculator.feature.spec.js" time="3.307">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/self-healing-brittle-calcu-783f1-terest-rate-absolute-XPath--self-healing/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/self-healing-brittle-calcu-783f1-terest-rate-absolute-XPath--self-healing/error-context.md]]
+
+[[ATTACHMENT|../test-results/self-healing-brittle-calcu-783f1-terest-rate-absolute-XPath--self-healing/trace.zip]]
+]]>
+</system-out>
+<error message="locator.fill: Timeout 3000ms exceeded." type="TimeoutError">
+<![CDATA[  [self-healing] › self-healing/brittle-calculator.feature.spec.js:15:7 › Legacy calculator flow (intentionally broken locators) › Typing the interest rate (absolute XPath) @broken @self-healing › When I type 10 into the legacy interest rate field 
+
+    TimeoutError: locator.fill: Timeout 3000ms exceeded.
+    Call log:
+      - waiting for locator('xpath=/html/body/div[1]/main/form/div[2]/input[1]')
+
+
+       at ../tests/pages/legacy/BrittleCalculatorPage.ts:110
+
+      108 |
+      109 |   async enterRate(rate: number): Promise<void> {
+    > 110 |     await this.rateInput.fill(String(rate), QUICK);
+          |                          ^
+      111 |   }
+      112 |
+      113 |   async calculate(): Promise<void> {
+        at BrittleCalculatorPage.enterRate (/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts:110:26)
+        at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/self-healing/brittle.steps.ts:21:22)
+        at /Users/adarshahalder/projects/testt/.features-gen/self-healing/brittle-calculator.feature.spec.js:16:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../reports/broken-run/test-results/self-healing-brittle-calcu-783f1-terest-rate-absolute-XPath--self-healing/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../reports/broken-run/test-results/self-healing-brittle-calcu-783f1-terest-rate-absolute-XPath--self-healing/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../reports/broken-run/test-results/self-healing-brittle-calcu-783f1-terest-rate-absolute-XPath--self-healing/trace.zip
+    Usage:
+
+        npx playwright show-trace ../reports/broken-run/test-results/self-healing-brittle-calcu-783f1-terest-rate-absolute-XPath--self-healing/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Legacy calculator flow (intentionally broken locators) › Clicking Calculate (renamed CSS class)" classname="self-healing/brittle-calculator.feature.spec.js" time="3.302">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/self-healing-brittle-calcu-af068-alculate-renamed-CSS-class--self-healing/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/self-healing-brittle-calcu-af068-alculate-renamed-CSS-class--self-healing/error-context.md]]
+
+[[ATTACHMENT|../test-results/self-healing-brittle-calcu-af068-alculate-renamed-CSS-class--self-healing/trace.zip]]
+]]>
+</system-out>
+<error message="locator.click: Timeout 3000ms exceeded." type="TimeoutError">
+<![CDATA[  [self-healing] › self-healing/brittle-calculator.feature.spec.js:19:7 › Legacy calculator flow (intentionally broken locators) › Clicking Calculate (renamed CSS class) @broken @self-healing › When I click the legacy Calculate button 
+
+    TimeoutError: locator.click: Timeout 3000ms exceeded.
+    Call log:
+      - waiting for locator('button.btn-calculate')
+
+
+       at ../tests/pages/legacy/BrittleCalculatorPage.ts:114
+
+      112 |
+      113 |   async calculate(): Promise<void> {
+    > 114 |     await this.calculateButton.click(QUICK);
+          |                                ^
+      115 |   }
+      116 |
+      117 |   async emiText(): Promise<string> {
+        at BrittleCalculatorPage.calculate (/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts:114:32)
+        at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/self-healing/brittle.steps.ts:25:22)
+        at /Users/adarshahalder/projects/testt/.features-gen/self-healing/brittle-calculator.feature.spec.js:20:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../reports/broken-run/test-results/self-healing-brittle-calcu-af068-alculate-renamed-CSS-class--self-healing/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../reports/broken-run/test-results/self-healing-brittle-calcu-af068-alculate-renamed-CSS-class--self-healing/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../reports/broken-run/test-results/self-healing-brittle-calcu-af068-alculate-renamed-CSS-class--self-healing/trace.zip
+    Usage:
+
+        npx playwright show-trace ../reports/broken-run/test-results/self-healing-brittle-calcu-af068-alculate-renamed-CSS-class--self-healing/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Legacy calculator flow (intentionally broken locators) › Reading the EMI result (stale generated id)" classname="self-healing/brittle-calculator.feature.spec.js" time="3.312">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/self-healing-brittle-calcu-b9292--result-stale-generated-id--self-healing/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/self-healing-brittle-calcu-b9292--result-stale-generated-id--self-healing/error-context.md]]
+
+[[ATTACHMENT|../test-results/self-healing-brittle-calcu-b9292--result-stale-generated-id--self-healing/trace.zip]]
+]]>
+</system-out>
+<error message="locator.textContent: Timeout 3000ms exceeded." type="TimeoutError">
+<![CDATA[  [self-healing] › self-healing/brittle-calculator.feature.spec.js:23:7 › Legacy calculator flow (intentionally broken locators) › Reading the EMI result (stale generated id) @broken @self-healing › Then the legacy EMI result should show a rupee amount 
+
+    TimeoutError: locator.textContent: Timeout 3000ms exceeded.
+    Call log:
+      - waiting for locator('#emi-result-value-3f9a')
+
+
+       at ../tests/pages/legacy/BrittleCalculatorPage.ts:118
+
+      116 |
+      117 |   async emiText(): Promise<string> {
+    > 118 |     return (await this.emiResult.textContent(QUICK)) ?? '';
+          |                                  ^
+      119 |   }
+      120 |
+      121 |   async totalInterestText(): Promise<string> {
+        at BrittleCalculatorPage.emiText (/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts:118:34)
+        at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/self-healing/brittle.steps.ts:29:29)
+        at /Users/adarshahalder/projects/testt/.features-gen/self-healing/brittle-calculator.feature.spec.js:24:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../reports/broken-run/test-results/self-healing-brittle-calcu-b9292--result-stale-generated-id--self-healing/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../reports/broken-run/test-results/self-healing-brittle-calcu-b9292--result-stale-generated-id--self-healing/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../reports/broken-run/test-results/self-healing-brittle-calcu-b9292--result-stale-generated-id--self-healing/trace.zip
+    Usage:
+
+        npx playwright show-trace ../reports/broken-run/test-results/self-healing-brittle-calcu-b9292--result-stale-generated-id--self-healing/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Legacy calculator flow (intentionally broken locators) › Reading total interest (nth-child chain)" classname="self-healing/brittle-calculator.feature.spec.js" time="3.318">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/self-healing-brittle-calcu-0757f-l-interest-nth-child-chain--self-healing/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/self-healing-brittle-calcu-0757f-l-interest-nth-child-chain--self-healing/error-context.md]]
+
+[[ATTACHMENT|../test-results/self-healing-brittle-calcu-0757f-l-interest-nth-child-chain--self-healing/trace.zip]]
+]]>
+</system-out>
+<error message="locator.textContent: Timeout 3000ms exceeded." type="TimeoutError">
+<![CDATA[  [self-healing] › self-healing/brittle-calculator.feature.spec.js:27:7 › Legacy calculator flow (intentionally broken locators) › Reading total interest (nth-child chain) @broken @self-healing › Then the legacy total interest result should show a rupee amount 
+
+    TimeoutError: locator.textContent: Timeout 3000ms exceeded.
+    Call log:
+      - waiting for locator('section.results dl > div:nth-child(2) > span.value')
+
+
+       at ../tests/pages/legacy/BrittleCalculatorPage.ts:122
+
+      120 |
+      121 |   async totalInterestText(): Promise<string> {
+    > 122 |     return (await this.totalInterestResult.textContent(QUICK)) ?? '';
+          |                                            ^
+      123 |   }
+      124 | }
+      125 |
+        at BrittleCalculatorPage.totalInterestText (/Users/adarshahalder/projects/testt/tests/pages/legacy/BrittleCalculatorPage.ts:122:44)
+        at Object.<anonymous> (/Users/adarshahalder/projects/testt/tests/steps/self-healing/brittle.steps.ts:33:29)
+        at /Users/adarshahalder/projects/testt/.features-gen/self-healing/brittle-calculator.feature.spec.js:28:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../reports/broken-run/test-results/self-healing-brittle-calcu-0757f-l-interest-nth-child-chain--self-healing/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../reports/broken-run/test-results/self-healing-brittle-calcu-0757f-l-interest-nth-child-chain--self-healing/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../reports/broken-run/test-results/self-healing-brittle-calcu-0757f-l-interest-nth-child-chain--self-healing/trace.zip
+    Usage:
+
+        npx playwright show-trace ../reports/broken-run/test-results/self-healing-brittle-calcu-0757f-l-interest-nth-child-chain--self-healing/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+</testsuites>

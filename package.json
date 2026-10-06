@@ -1,0 +1,34 @@
+{
+  "name": "streamhub-qa-automation",
+  "version": "1.0.0",
+  "scripts": {
+    "app": "node app/server.js",
+    "bddgen": "bddgen",
+    "test": "bddgen && playwright test",
+    "test:ui": "bddgen && playwright test --project=ui",
+    "test:api": "bddgen && playwright test --project=api",
+    "test:sql": "bddgen && playwright test --project=sql",
+    "test:smoke": "bddgen && playwright test --grep @smoke",
+    "test:broken": "INCLUDE_BROKEN=true bddgen && INCLUDE_BROKEN=true playwright test --project=self-healing",
+    "heal": "tsx self-healing/heal.ts",
+    "sql:seed:ipl": "node sql/seed/generate_ipl_seed.js",
+    "report": "playwright show-report reports/playwright-html",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "Playwright + Cucumber (playwright-bdd) framework: LoanLens web app UI tests, JSONPlaceholder API tests, SQL scenarios and an AI self-healing locator POC",
+  "devDependencies": {
+    "@anthropic-ai/sdk": "^0.131.0",
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.4",
+    "@types/sql.js": "^1.4.11",
+    "dotenv": "^18.0.5",
+    "playwright-bdd": "^9.2.1",
+    "sql.js": "^1.14.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "zod": "^4.6.5"
+  },
+  "private": true
+}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LoanLens · EMI Calculator</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <span class="brand">LoanLens</span>
+    <nav aria-label="Main">
+      <a href="/">Dashboard</a>
+      <a href="/calculator" aria-current="page">EMI Calculator</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>EMI Calculator</h1>
+
+    <div role="tablist" aria-label="Loan type" class="tabs">
+      <button role="tab" id="tab-home" aria-selected="true" data-loan-type="home">Home Loan</button>
+      <button role="tab" id="tab-personal" aria-selected="false" data-loan-type="personal">Personal Loan</button>
+      <button role="tab" id="tab-car" aria-selected="false" data-loan-type="car">Car Loan</button>
+    </div>
+
+    <form id="emi-form" class="panel" novalidate aria-label="Loan details">
+      <div class="field">
+        <label for="amount" id="amount-label">Home Loan Amount (₹)</label>
+        <input id="amount" name="amount" type="number" aria-describedby="amount-error" inputmode="numeric" step="1000">
+        <input id="amount-slider" type="range" aria-labelledby="amount-label" step="10000">
+        <p class="error" id="amount-error" role="alert" hidden></p>
+      </div>
+      <div class="field">
+        <label for="rate" id="rate-label">Interest Rate (% p.a.)</label>
+        <input id="rate" name="rate" type="number" aria-describedby="rate-error" step="0.05">
+        <input id="rate-slider" type="range" aria-labelledby="rate-label" step="0.05">
+        <p class="error" id="rate-error" role="alert" hidden></p>
+      </div>
+      <div class="field">
+        <label for="tenure" id="tenure-label">Loan Tenure (years)</label>
+        <input id="tenure" name="tenure" type="number" aria-describedby="tenure-error" step="1">
+        <input id="tenure-slider" type="range" aria-labelledby="tenure-label" step="1">
+        <p class="error" id="tenure-error" role="alert" hidden></p>
+      </div>
+      <div class="field">
+        <label for="start-month">Schedule showing EMI payments starting from</label>
+        <input id="start-month" name="startMonth" type="month">
+      </div>
+      <button type="submit" class="primary">Calculate</button>
+    </form>
+
+    <section class="panel results" aria-labelledby="results-heading" aria-live="polite">
+      <h2 id="results-heading">Results</h2>
+      <dl>
+        <div><dt>Monthly EMI</dt><dd data-testid="result-emi">–</dd></div>
+        <div><dt>Total Interest Payable</dt><dd data-testid="result-interest">–</dd></div>
+        <div><dt>Total Payment (Principal + Interest)</dt><dd data-testid="result-total">–</dd></div>
+      </dl>
+      <div id="breakup-pie" class="pie"></div>
+    </section>
+
+    <section class="panel" aria-labelledby="schedule-heading">
+      <h2 id="schedule-heading">Yearly payment schedule</h2>
+      <div id="schedule-chart" class="bars"></div>
+      <table aria-labelledby="schedule-heading">
+        <thead><tr><th scope="col">Year</th><th scope="col">Principal (A)</th><th scope="col">Interest (B)</th>
+          <th scope="col">Total Payment (A + B)</th><th scope="col">Balance</th></tr></thead>
+        <tbody id="schedule-rows"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="/js/emi.js"></script>
+  <script src="/js/charts.js"></script>
+  <script src="/js/calculator.js"></script>
+</body>
+</html>

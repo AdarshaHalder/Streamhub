@@ -1,0 +1,755 @@
+{
+  "generatedAt": "2026-10-06T07:19:14.171Z",
+  "aiEnabled": false,
+  "results": [
+    {
+      "key": "amountInput",
+      "brokenSelector": "xpath=//form/div[1]/input[2]",
+      "intent": "Numeric text box where the user types the loan amount",
+      "detection": {
+        "status": "WRONG_ELEMENT",
+        "detail": "expected role \"spinbutton\" named /Loan Amount/ but found <input type=\"range\">"
+      },
+      "notes": [
+        "AI disabled (--no-ai)"
+      ],
+      "candidates": [
+        {
+          "code": "page.getByRole('spinbutton', { name: 'Home Loan Amount' })",
+          "locator": {
+            "strategy": "role",
+            "value": "spinbutton",
+            "name": "Home Loan Amount"
+          },
+          "rationale": "Matched intent words: numeric, text, box, loan, amount",
+          "confidence": 1,
+          "source": "heuristic",
+          "validation": {
+            "passed": false,
+            "checks": [
+              {
+                "name": "unique",
+                "ok": true,
+                "detail": "matched 1 element(s)"
+              },
+              {
+                "name": "visible",
+                "ok": true,
+                "detail": "visible"
+              },
+              {
+                "name": "semantic",
+                "ok": true,
+                "detail": "role \"spinbutton\" confirmed"
+              },
+              {
+                "name": "behaviour",
+                "ok": true,
+                "detail": "accepted input \"101000\""
+              },
+              {
+                "name": "re-render",
+                "ok": false,
+                "detail": "matched 0 after switching to the Car Loan tab"
+              }
+            ]
+          }
+        },
+        {
+          "code": "page.getByRole('spinbutton', { name: 'Loan Amount' })",
+          "locator": {
+            "strategy": "role",
+            "value": "spinbutton",
+            "name": "Loan Amount"
+          },
+          "rationale": "Matched intent words: numeric, text, box, loan, amount",
+          "confidence": 1,
+          "source": "heuristic",
+          "validation": {
+            "passed": true,
+            "checks": [
+              {
+                "name": "unique",
+                "ok": true,
+                "detail": "matched 1 element(s)"
+              },
+              {
+                "name": "visible",
+                "ok": true,
+                "detail": "visible"
+              },
+              {
+                "name": "semantic",
+                "ok": true,
+                "detail": "role \"spinbutton\" confirmed"
+              },
+              {
+                "name": "behaviour",
+                "ok": true,
+                "detail": "accepted input \"101000\""
+              },
+              {
+                "name": "re-render",
+                "ok": true,
+                "detail": "matched 1 after switching to the Car Loan tab"
+              },
+              {
+                "name": "responsive",
+                "ok": true,
+                "detail": "unique and visible at 390×844"
+              }
+            ]
+          }
+        },
+        {
+          "code": "page.getByRole('spinbutton', { name: 'Loan Tenure' })",
+          "locator": {
+            "strategy": "role",
+            "value": "spinbutton",
+            "name": "Loan Tenure"
+          },
+          "rationale": "Matched intent words: numeric, text, box, loan",
+          "confidence": 0.8,
+          "source": "heuristic",
+          "validation": {
+            "passed": false,
+            "checks": [
+              {
+                "name": "unique",
+                "ok": true,
+                "detail": "matched 1 element(s)"
+              },
+              {
+                "name": "visible",
+                "ok": true,
+                "detail": "visible"
+              },
+              {
+                "name": "semantic",
+                "ok": false,
+                "detail": "expected role \"spinbutton\" named /Loan Amount/ but found <input type=\"number\">"
+              }
+            ]
+          }
+        },
+        {
+          "code": "page.getByRole('spinbutton', { name: 'Interest Rate' })",
+          "locator": {
+            "strategy": "role",
+            "value": "spinbutton",
+            "name": "Interest Rate"
+          },
+          "rationale": "Matched intent words: numeric, text, box",
+          "confidence": 0.6,
+          "source": "heuristic",
+          "validation": {
+            "passed": false,
+            "checks": [
+              {
+                "name": "unique",
+                "ok": true,
+                "detail": "matched 1 element(s)"
+              },
+              {
+                "name": "visible",
+                "ok": true,
+                "detail": "visible"
+              },
+              {
+                "name": "semantic",
+                "ok": false,
+                "detail": "expected role \"spinbutton\" named /Loan Amount/ but found <input type=\"number\">"
+              }
+            ]
+          }
+        },
+        {
+          "code": "page.getByRole('tablist', { name: 'Loan type' })",
+          "locator": {
+            "strategy": "role",
+            "value": "tablist",
+            "name": "Loan type"
+          },
+          "rationale": "Matched intent words: loan",
+          "confidence": 0.2,
+          "source": "heuristic",
+          "validation": {
+            "passed": false,
+            "checks": [
+              {
+                "name": "unique",
+                "ok": true,
+                "detail": "matched 1 element(s)"
+              },
+              {
+                "name": "visible",
+                "ok": true,
+                "detail": "visible"
+              },
+              {
+                "name": "semantic",
+                "ok": false,
+                "detail": "expected role \"spinbutton\" named /Loan Amount/ but found <div role=\"tablist\" aria-label=\"Loan type\">"
+              }
+            ]
+          }
+        }
+      ],
+      "suggestion": "page.getByRole('spinbutton', { name: 'Loan Amount' })"
+    },
+    {
+      "key": "rateInput",
+      "brokenSelector": "xpath=/html/body/div[1]/main/form/div[2]/input[1]",
+      "intent": "Numeric text box for the annual interest rate",
+      "detection": {
+        "status": "NOT_FOUND",
+        "detail": "\"xpath=/html/body/div[1]/main/form/div[2]/input[1]\" matched no elements"
+      },
+      "notes": [
+        "AI disabled (--no-ai)"
+      ],
+      "candidates": [
+        {
+          "code": "page.getByRole('spinbutton', { name: 'Interest Rate' })",
+          "locator": {
+            "strategy": "role",
+            "value": "spinbutton",
+            "name": "Interest Rate"
+          },
+          "rationale": "Matched intent words: numeric, text, box, interest, rat",
+          "confidence": 0.71,
+          "source": "heuristic",
+          "validation": {
+            "passed": true,
+            "checks": [
+              {
+                "name": "unique",
+                "ok": true,
+                "detail": "matched 1 element(s)"
+              },
+              {
+                "name": "visible",
+                "ok": true,
+                "detail": "visible"
+              },
+              {
+                "name": "semantic",
+                "ok": true,
+                "detail": "role \"spinbutton\" confirmed"
+              },
+              {
+                "name": "behaviour",
+                "ok": true,
+                "detail": "accepted input \"5.05\""
+              },
+              {
+                "name": "re-render",
+                "ok": true,
+                "detail": "matched 1 after switching to the Car Loan tab"
+              },
+              {
+                "name": "responsive",
+                "ok": true,
+                "detail": "unique and visible at 390×844"
+              }
+            ]
+          }
+        },
+        {
+          "code": "page.getByRole('spinbutton', { name: 'Home Loan Amount' })",
+          "locator": {
+            "strategy": "role",
+            "value": "spinbutton",
+            "name": "Home Loan Amount"
+          },
+          "rationale": "Matched intent words: numeric, text, box",
+          "confidence": 0.43,
+          "source": "heuristic",
+          "validation": {
+            "passed": false,
+            "checks": [
+              {
+                "name": "unique",
+                "ok": true,
+                "detail": "matched 1 element(s)"
+              },
+              {
+                "name": "visible",
+                "ok": true,
+                "detail": "visible"
+              },
+              {
+                "name": "semantic",
+                "ok": false,
+                "detail": "expected role \"spinbutton\" named /Interest Rate/ but found <input type=\"number\">"
+              }
+            ]
+          }
+        },
+        {
+          "code": "page.getByRole('spinbutton', { name: 'Loan Amount' })",
+          "locator": {
+            "strategy": "role",
+            "value": "spinbutton",
+            "name": "Loan Amount"
+          },
+          "rationale": "Matched intent words: numeric, text, box",
+          "confidence": 0.43,
+          "source": "heuristic",
+          "validation": {
+            "passed": false,
+            "checks": [
+              {
+                "name": "unique",
+                "ok": true,
+                "detail": "matched 1 element(s)"
+              },
+              {
+                "name": "visible",
+                "ok": true,
+                "detail": "visible"
+              },
+              {
+                "name": "semantic",
+                "ok": false,
+                "detail": "expected role \"spinbutton\" named /Interest Rate/ but found <input type=\"number\">"
+              }
+            ]
+          }
+        },
+        {
+          "code": "page.getByRole('spinbutton', { name: 'Loan Tenure' })",
+          "locator": {
+            "strategy": "role",
+            "value": "spinbutton",
+            "name": "Loan Tenure"
+          },
+          "rationale": "Matched intent words: numeric, text, box",
+          "confidence": 0.43,
+          "source": "heuristic",
+          "validation": {
+            "passed": false,
+            "checks": [
+              {
+                "name": "unique",
+                "ok": true,
+                "detail": "matched 1 element(s)"
+              },
+              {
+                "name": "visible",
+                "ok": true,
+                "detail": "visible"
+              },
+              {
+                "name": "semantic",
+                "ok": false,
+                "detail": "expected role \"spinbutton\" named /Interest Rate/ but found <input type=\"number\">"
+              }
+            ]
+          }
+        }
+      ],
+      "suggestion": "page.getByRole('spinbutton', { name: 'Interest Rate' })"
+    },
+    {
+      "key": "calculateButton",
+      "brokenSelector": "button.btn-calculate",
+      "intent": "Button that submits the loan form and calculates the EMI",
+      "detection": {
+        "status": "NOT_FOUND",
+        "detail": "\"button.btn-calculate\" matched no elements"
+      },
+      "notes": [
+        "AI disabled (--no-ai)"
+      ],
+      "candidates": [
+        {
+          "code": "page.getByRole('tab', { name: 'Home Loan' })",
+          "locator": {
+            "strategy": "role",
+            "value": "tab",
+            "name": "Home Loan"
+          },
+          "rationale": "Matched intent words: button, submit, loan",
+          "confidence": 0.5,
+          "source": "heuristic",
+          "validation": {
+            "passed": false,
+            "checks": [
+              {
+                "name": "unique",
+                "ok": true,
+                "detail": "matched 1 element(s)"
+              },
+              {
+                "name": "visible",
+                "ok": true,
+                "detail": "visible"
+              },
+              {
+                "name": "semantic",
+                "ok": false,
+                "detail": "expected role \"button\" named /^Calculate$/ but found <button role=\"tab\">"
+              }
+            ]
+          }
+        },
+        {
+          "code": "page.getByRole('tab', { name: 'Personal Loan' })",
+          "locator": {
+            "strategy": "role",
+            "value": "tab",
+            "name": "Personal Loan"
+          },
+          "rationale": "Matched intent words: button, submit, loan",
+          "confidence": 0.5,
+          "source": "heuristic",
+          "validation": {
+            "passed": false,
+            "checks": [
+              {
+                "name": "unique",
+                "ok": true,
+                "detail": "matched 1 element(s)"
+              },
+              {
+                "name": "visible",
+                "ok": true,
+                "detail": "visible"
+              },
+              {
+                "name": "semantic",
+                "ok": false,
+                "detail": "expected role \"button\" named /^Calculate$/ but found <button role=\"tab\">"
+              }
+            ]
+          }
+        },
+        {
+          "code": "page.getByRole('tab', { name: 'Car Loan' })",
+          "locator": {
+            "strategy": "role",
+            "value": "tab",
+            "name": "Car Loan"
+          },
+          "rationale": "Matched intent words: button, submit, loan",
+          "confidence": 0.5,
+          "source": "heuristic",
+          "validation": {
+            "passed": false,
+            "checks": [
+              {
+                "name": "unique",
+                "ok": true,
+                "detail": "matched 1 element(s)"
+              },
+              {
+                "name": "visible",
+                "ok": true,
+                "detail": "visible"
+              },
+              {
+                "name": "semantic",
+                "ok": false,
+                "detail": "expected role \"button\" named /^Calculate$/ but found <button role=\"tab\">"
+              }
+            ]
+          }
+        },
+        {
+          "code": "page.getByRole('button', { name: 'Calculate' })",
+          "locator": {
+            "strategy": "role",
+            "value": "button",
+            "name": "Calculate"
+          },
+          "rationale": "Matched intent words: button, submit, calculat",
+          "confidence": 0.5,
+          "source": "heuristic",
+          "validation": {
+            "passed": true,
+            "checks": [
+              {
+                "name": "unique",
+                "ok": true,
+                "detail": "matched 1 element(s)"
+              },
+              {
+                "name": "visible",
+                "ok": true,
+                "detail": "visible"
+              },
+              {
+                "name": "semantic",
+                "ok": true,
+                "detail": "role \"button\" confirmed"
+              },
+              {
+                "name": "behaviour",
+                "ok": true,
+                "detail": "enabled and clickable"
+              },
+              {
+                "name": "re-render",
+                "ok": true,
+                "detail": "matched 1 after switching to the Car Loan tab"
+              },
+              {
+                "name": "responsive",
+                "ok": true,
+                "detail": "unique and visible at 390×844"
+              }
+            ]
+          }
+        }
+      ],
+      "suggestion": "page.getByRole('button', { name: 'Calculate' })"
+    },
+    {
+      "key": "emiResult",
+      "brokenSelector": "#emi-result-value-3f9a",
+      "intent": "The calculated monthly EMI amount shown in the results panel",
+      "detection": {
+        "status": "NOT_FOUND",
+        "detail": "\"#emi-result-value-3f9a\" matched no elements"
+      },
+      "notes": [
+        "AI disabled (--no-ai)"
+      ],
+      "candidates": [
+        {
+          "code": "page.getByTestId('result-emi')",
+          "locator": {
+            "strategy": "testid",
+            "value": "result-emi",
+            "name": null
+          },
+          "rationale": "Matched intent words: monthly, emi, amount, result, valu",
+          "confidence": 0.71,
+          "source": "heuristic",
+          "validation": {
+            "passed": true,
+            "checks": [
+              {
+                "name": "unique",
+                "ok": true,
+                "detail": "matched 1 element(s)"
+              },
+              {
+                "name": "visible",
+                "ok": true,
+                "detail": "visible"
+              },
+              {
+                "name": "semantic",
+                "ok": true,
+                "detail": "role \"definition\" confirmed"
+              },
+              {
+                "name": "behaviour",
+                "ok": true,
+                "detail": "shows \"₹44,986\""
+              },
+              {
+                "name": "re-render",
+                "ok": true,
+                "detail": "matched 1 after switching to the Car Loan tab"
+              },
+              {
+                "name": "responsive",
+                "ok": true,
+                "detail": "unique and visible at 390×844"
+              }
+            ]
+          }
+        },
+        {
+          "code": "page.getByTestId('result-interest')",
+          "locator": {
+            "strategy": "testid",
+            "value": "result-interest",
+            "name": null
+          },
+          "rationale": "Matched intent words: amount, result, valu",
+          "confidence": 0.43,
+          "source": "heuristic",
+          "validation": {
+            "passed": false,
+            "checks": [
+              {
+                "name": "unique",
+                "ok": true,
+                "detail": "matched 1 element(s)"
+              },
+              {
+                "name": "visible",
+                "ok": true,
+                "detail": "visible"
+              },
+              {
+                "name": "semantic",
+                "ok": false,
+                "detail": "expected the value labelled /^Monthly EMI$/ but found the one labelled \"Total Interest Payable\""
+              }
+            ]
+          }
+        },
+        {
+          "code": "page.getByTestId('result-total')",
+          "locator": {
+            "strategy": "testid",
+            "value": "result-total",
+            "name": null
+          },
+          "rationale": "Matched intent words: amount, result, valu",
+          "confidence": 0.43,
+          "source": "heuristic",
+          "validation": {
+            "passed": false,
+            "checks": [
+              {
+                "name": "unique",
+                "ok": true,
+                "detail": "matched 1 element(s)"
+              },
+              {
+                "name": "visible",
+                "ok": true,
+                "detail": "visible"
+              },
+              {
+                "name": "semantic",
+                "ok": false,
+                "detail": "expected the value labelled /^Monthly EMI$/ but found the one labelled \"Total Payment (Principal + Interest)\""
+              }
+            ]
+          }
+        }
+      ],
+      "suggestion": "page.getByTestId('result-emi')"
+    },
+    {
+      "key": "totalInterestResult",
+      "brokenSelector": "section.results dl > div:nth-child(2) > span.value",
+      "intent": "The total interest payable figure in the results panel",
+      "detection": {
+        "status": "NOT_FOUND",
+        "detail": "\"section.results dl > div:nth-child(2) > span.value\" matched no elements"
+      },
+      "notes": [
+        "AI disabled (--no-ai)"
+      ],
+      "candidates": [
+        {
+          "code": "page.getByTestId('result-interest')",
+          "locator": {
+            "strategy": "testid",
+            "value": "result-interest",
+            "name": null
+          },
+          "rationale": "Matched intent words: total, interest, payabl, figur, result, valu",
+          "confidence": 0.86,
+          "source": "heuristic",
+          "validation": {
+            "passed": true,
+            "checks": [
+              {
+                "name": "unique",
+                "ok": true,
+                "detail": "matched 1 element(s)"
+              },
+              {
+                "name": "visible",
+                "ok": true,
+                "detail": "visible"
+              },
+              {
+                "name": "semantic",
+                "ok": true,
+                "detail": "role \"definition\" confirmed"
+              },
+              {
+                "name": "behaviour",
+                "ok": true,
+                "detail": "shows \"₹57,96,711\""
+              },
+              {
+                "name": "re-render",
+                "ok": true,
+                "detail": "matched 1 after switching to the Car Loan tab"
+              },
+              {
+                "name": "responsive",
+                "ok": true,
+                "detail": "unique and visible at 390×844"
+              }
+            ]
+          }
+        },
+        {
+          "code": "page.getByTestId('result-total')",
+          "locator": {
+            "strategy": "testid",
+            "value": "result-total",
+            "name": null
+          },
+          "rationale": "Matched intent words: total, interest, figur, result, valu",
+          "confidence": 0.71,
+          "source": "heuristic",
+          "validation": {
+            "passed": false,
+            "checks": [
+              {
+                "name": "unique",
+                "ok": true,
+                "detail": "matched 1 element(s)"
+              },
+              {
+                "name": "visible",
+                "ok": true,
+                "detail": "visible"
+              },
+              {
+                "name": "semantic",
+                "ok": false,
+                "detail": "expected the value labelled /^Total Interest Payable$/ but found the one labelled \"Total Payment (Principal + Interest)\""
+              }
+            ]
+          }
+        },
+        {
+          "code": "page.getByTestId('result-emi')",
+          "locator": {
+            "strategy": "testid",
+            "value": "result-emi",
+            "name": null
+          },
+          "rationale": "Matched intent words: figur, result, valu",
+          "confidence": 0.43,
+          "source": "heuristic",
+          "validation": {
+            "passed": false,
+            "checks": [
+              {
+                "name": "unique",
+                "ok": true,
+                "detail": "matched 1 element(s)"
+              },
+              {
+                "name": "visible",
+                "ok": true,
+                "detail": "visible"
+              },
+              {
+                "name": "semantic",
+                "ok": false,
+                "detail": "expected the value labelled /^Total Interest Payable$/ but found the one labelled \"Monthly EMI\""
+              }
+            ]
+          }
+        }
+      ],
+      "suggestion": "page.getByTestId('result-interest')"
+    }
+  ]
+}
